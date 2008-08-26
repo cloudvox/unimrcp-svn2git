@@ -65,3 +65,25 @@ $ make install
 
 
 ===VS2005 Build (Windows XP, Vista, ...)===
+====Additional requirements====
+  * Microsoft Visual Studio 2005
+
+====Build preparation====
+  * To specify where to look for the APR and APR-util libraries use apr.vsprops located in build/vsprops:
+	<UserMacro
+		Name="AprDir"
+		Value="$(SolutionDir)libs\apr"
+	/>
+	<UserMacro
+		Name="AprUtilDir"
+		Value="$(SolutionDir)libs\apr-util"
+	/>
+
+  * To specify  where to look for the Sofia-SIP library use tsofiasip.vsprops located in build/vsprops:
+	<UserMacro
+		Name="SofiaDir"
+		Value="$(SolutionDir)libs\sofia-sip"
+	/>
+
+====Build procedure====
+Open unimrcp.sln solution file and build it.
