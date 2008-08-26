@@ -47,10 +47,10 @@ $ make install
 }}}
 
 ====Configure options====
-  * To specify where to look for the APR and APR-util libraries use the "--with-apr=" and "--with-apr-util=" options:
+  * To explicitly specify where to look for the APR and APR-util libraries use the "--with-apr=" and "--with-apr-util=" options:
     $ ./configure --with-apr=/usr/local/apr --with-apr-util=/usr/local/apr
 
-  * To specify  where to look for the Sofia-SIP library use the "--with-sofia-sip=" option:
+  * To explicitly specify where to look for the Sofia-SIP library use the "--with-sofia-sip=" option:
     $ ./configure --with-sofia-sip=/usr/local/sofia-sip
 
 ====Makefile rules====
@@ -70,6 +70,7 @@ $ make install
 
 ====Build preparation====
   * To specify where to look for the APR and APR-util libraries use apr.vsprops located in build/vsprops:
+{{{
 	<UserMacro
 		Name="AprDir"
 		Value="$(SolutionDir)libs\apr"
@@ -78,12 +79,14 @@ $ make install
 		Name="AprUtilDir"
 		Value="$(SolutionDir)libs\apr-util"
 	/>
-
+}}}
   * To specify  where to look for the Sofia-SIP library use tsofiasip.vsprops located in build/vsprops:
+{{{
 	<UserMacro
 		Name="SofiaDir"
 		Value="$(SolutionDir)libs\sofia-sip"
 	/>
+}}}
 
 ====Build procedure====
 Open unimrcp.sln solution file and build it.
