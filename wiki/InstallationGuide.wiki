@@ -1,4 +1,5 @@
 #summary Installation Guide.
+#labels Featured
 
 = How to Download, Build and Install UniMRCP Project. =
 == Content ==
