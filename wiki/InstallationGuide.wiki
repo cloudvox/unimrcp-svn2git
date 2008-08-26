@@ -68,7 +68,7 @@ $ make install
 ====Additional requirements====
   * Microsoft Visual Studio 2005
 
-====Build preparation====
+====One-time pre-build preparation====
   * To specify where to look for the APR and APR-util libraries use apr.vsprops located in build/vsprops:
 {{{
 	<UserMacro
@@ -90,3 +90,10 @@ $ make install
 
 ====Build procedure====
 Open unimrcp.sln solution file and build it.
+
+====One-time post-build preparation (should be automated in the future)====
+  * Copy libapr-1.lib, libapr-1.exp, libapr-1.dll, libapr-1.pdb from $(AprDir)$(ConfigurationName) into $(SolutionDir)$(ConfigurationName)
+  * Copy libaprutil-1.lib, libaprutil-1.exp, libaprutil-1.dll, libaprutil-1.pdb from $(AprUtilDir)$(ConfigurationName) into $(SolutionDir)$(ConfigurationName)
+  * Copy libsofia_sip_ua.lib, libsofia_sip_ua.exp, libsofia_sip_ua.dll, libsofia_sip_ua.pdb from $(SofiaDir)\win32\libsofia-sip-ua\$(ConfigurationName) into $(SolutionDir)$(ConfigurationName)
+  * Copy pthreadVC2.dll from $(SofiaDir)\win32\pthread into $(SolutionDir)$(ConfigurationName)
+  * Copy unimrcpclient.xml and unimrcpserver.xml from $(SolutionDir)conf into $(SolutionDir)$(ConfigurationName)
