@@ -1,0 +1,67 @@
+#summary Installation Guide.
+
+= How to Download, Build and Install UniMRCP Project. =
+== Content ==
+
+  # Obtain Source
+    * Download Source Tarball
+    * Checkout Source via SVN
+  # Build Source
+    * Requirements
+    * GNU Build (Linux and other Unix variants ...)
+    * VS2005 Build (Windows XP, Vista, ...)
+
+
+
+
+== Details ==
+==1. Obtain Source ==
+===Download Source Tarball ===
+Use the link below to download source tarball
+    http://code.google.com/p/unimrcp/downloads/list
+
+===Checkout Source via SVN ===
+Use the command below to anonymously checkout the latest source code
+    svn checkout http://unimrcp.googlecode.com/svn/trunk/ unimrcp
+
+==2. Build Source ==
+===Requirements ===
+UniMRCP depends on a number of third party tools and libraries,
+which must be installed prior to UniMRCP build.
+
+1. Apache Portable Runtime [>=1.2.x] (http://apr.apache.org/). Whenever you want to build any part of UniMRCP, you need the Apache Portable Runtime (APR) and the APR Utility (APR-util) libraries.
+
+2. Sofia-SIP [>=1.12.6] (http://sofia-sip.sourceforge.net/). Sofia-SIP library is used to implement MRCPv2 specification compliant SIP signaling. Sofia-SIP is an open-source SIP User-Agent library, compliant with the IETF RFC3261 specification.
+
+===GNU Build (Linux and other Unix variants ...)===
+====Additional requirements====
+  * autoconf 2.57 or newer
+  * libtool 1.4 or newer
+
+====Build procedure====
+{{{
+$ ./bootstrap
+$ ./configure
+$ make
+$ make install
+}}}
+
+====Configure options====
+  * To specify where to look for the APR and APR-util libraries use the "--with-apr=" and "--with-apr-util=" options:
+    $ ./configure --with-apr=/usr/local/apr --with-apr-util=/usr/local/apr
+
+  * To specify  where to look for the Sofia-SIP library use the "--with-sofia-sip=" option:
+    $ ./configure --with-sofia-sip=/usr/local/sofia-sip
+
+====Makefile rules====
+  * To install the default configuration use:
+    $ make def-conf
+
+  * To generate doxygen documentation from the source use:
+    $ make dox
+
+  * To build distribution tarball use:
+    $ make dist
+
+
+===VS2005 Build (Windows XP, Vista, ...)===
