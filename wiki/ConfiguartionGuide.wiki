@@ -1,0 +1,7 @@
+#summary UniMRCP Configurtion Guide.
+
+= How to Configure UniMRCP Client and Server. =
+== Content ==
+
+  # Client Configuration
+  # Server Configuration
