@@ -1,0 +1,56 @@
+#summary Cepstral Plugin Integration Guide.
+#labels Id-3
+
+= How to Build and Use Cepstral Plugin with UniMRCP Server. =
+== Contents ==
+
+    # Overview
+    # Requirements
+    # Build
+       * GNU Build (Linux and other Unix variants)
+       * VS2005 Build (Windows XP, Vista, ...)
+    # Configuration
+
+= Details =
+
+==1. Overview ==
+This guide describes how to use Cepstral Swift TTS with UniMRCP server. It assumes you are already familiar with [InstallationGuide installation] and [ConfigurationGuide configuration] tips of UniMRCP server.
+UniMRCP server provides plugin interface to integrate 3-rd party TTS and ASR engines. Plugin called mrcpcepstral implements the MRCP resource engine interface using Cepstral Swift TTS engine.
+
+==2. Requirements ==
+Cepstral Swift SDK and Voices must be installed.
+
+See the snip from the post made by Cepstral on how to obtain the SDK.
+{{{
+Cepstral is interested in helping this community and would like to see
+more MRCP based implementations.  We will help you with the SDK.
+Please visit our Support page and identify yourself as a UniMRCP
+developer, the nature of your project, and we'll send you the SDK.
+(http://support.cepstral.com/)
+}}}
+
+==3. Build ==
+===GNU Build (Linux and other Unix variants)===
+====Configure option====
+   To explicitly specify where to look for the Cepstral Swift library use the "--with-swift=" option:
+    $ ./configure --with-swift=/opt/swift
+
+===VS2005 Build (Windows XP, Vista, ...)===
+====One-time pre-build preparation====
+  * To specify where to look for the Swift library use cepstral.vsprops located in build/vsprops:
+{{{
+       <UserMacro
+           Name="CepstralSDKDir"
+           Value="C:\Program Files\Cepstral\sdk"
+       />
+}}}
+
+Open unimrcp.sln solution file, enable mrcpcepstral project build from Build -> Configuration Menu and build the solution.
+
+==4. Configuration ==
+Specify mrcpcepstral as a plugin in unimrcpserver.xml as follows:
+{{{
+    <plugin>
+      <engine name="Cepstral-Swift-1" class="mrcpcepstral"/>
+    </plugin>
+}}}
