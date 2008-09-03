@@ -1,7 +1,64 @@
-#summary UniMRCP Configurtion Guide.
+#summary UniMRCP Configuration Guide.
 
 = How to Configure UniMRCP Client and Server. =
-== Content ==
+== Contents ==
 
+  # Overview
   # Client Configuration
   # Server Configuration
+
+== Details ==
+
+==1. Overview ==
+This guide describes how to configure UniMRCP client and server. It assumes UniMRCP is already installed, otherwise proceed with the [InstallationGuide installation] first. UniMRCP uses XML based configuration for both client and server. The default configuration files unimrcpclient.xml and unimrcpserver.xml are located in the conf directory of the source tree.
+
+==2. Client Configuration ==
+===2.1. Settings ===
+==== Signaling Agents ====
+More than one SIP/MRCPv2 and/or RTSP/MRCPv1 signaling agents can be specified. Each signaling agent must be assigned the unique name and the class identifier.
+The following is the example of MRCPv2 SofiaSIP signaling agent:
+{{{
+      <agent name="SIP-Agent-1" class="SofiaSIP">
+        <param name="client-ip" value="192.168.0.1"/>
+        <param name="client-port" value="5060"/>
+        <param name="server-ip" value="192.168.0.2"/>
+        <param name="server-port" value="5060"/>
+      </agent>
+}}}
+The following is the example of MRCPv1 UniRTSP signaling agent (incomplete):
+{{{
+      <agent name="RTSP-Agent-1" class="UniRTSP">
+        <param name="client-ip" value="192.168.0.1"/>
+        <param name="server-ip" value="192.168.0.2"/>
+        <param name="server-port" value="8554"/>
+      </agent>
+}}}
+
+==== Connection Agents (MRCPv2) ====
+More than one MRCPv2 connection agents can be specified. Each connection agent must be assigned the unique name. The following is the example of MRCPv2 connection agent:
+{{{
+      <agent name="MRCPv2-Agent-1">
+        <param name="max-connection-count" value="100"/>
+      </agent>
+}}}
+
+==== Media Engines ====
+More than one media processing engines can be specified. Each media engine must be assigned the unique name. No media engine might be specified in case external media processing is used (bypass media mode). The following is the example of media engine:
+{{{
+      <engine name="Media-Engine-1"/>
+}}}
+
+==== RTP Termination Factories ====
+More than one RTP termination factories can be specified. Each factory must be assigned the unique name. No factory might be specified in case external media processing is used (bypass media mode). The following is the example of RTP termination factory:
+{{{
+      <rtp name="RTP-Factory-1">
+        <param name="rtp-ip" value="192.168.0.1"/>
+        <param name="rtp-port-min" value="4000"/>
+        <param name="rtp-port-max" value="5000"/>
+      </rtp>
+}}}
+
+Note: By default "auto" directive is used wherever the local IP address to bind to must be specified. In this case IP address is automatically guessed. However it may cause some delay on startup. You may want to explicitly specify the IP address in order to speedup the startup or in case the guessed IP address is incorrect.
+
+===2.2. Profiles ===
+Profiles are just collection of settings. Each profile includes one of signaling, connection agents, etc.
