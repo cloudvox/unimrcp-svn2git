@@ -2,14 +2,14 @@
 #labels Featured
 
 = How to Download, Build and Install UniMRCP Project. =
-== Content ==
+== Contents ==
 
   # Obtain Source
     * Download Source Tarball
     * Checkout Source via SVN
   # Build Source
     * Requirements
-    * GNU Build (Linux and other Unix variants ...)
+    * GNU Build (Linux and other Unix variants)
     * VS2005 Build (Windows XP, Vista, ...)
 
 
@@ -34,7 +34,7 @@ which must be installed prior to UniMRCP build.
 
 2. Sofia-SIP [>=1.12.6] (http://sofia-sip.sourceforge.net/). Sofia-SIP library is used to implement MRCPv2 specification compliant SIP signaling. Sofia-SIP is an open-source SIP User-Agent library, compliant with the IETF RFC3261 specification.
 
-===GNU Build (Linux and other Unix variants ...)===
+===GNU Build (Linux and other Unix variants)===
 ====Additional requirements====
   * autoconf 2.57 or newer
   * libtool 1.4 or newer
@@ -81,7 +81,7 @@ $ make install
 		Value="$(SolutionDir)libs\apr-util"
 	/>
 }}}
-  * To specify  where to look for the Sofia-SIP library use tsofiasip.vsprops located in build/vsprops:
+  * To specify where to look for the Sofia-SIP library use sofiasip.vsprops located in build/vsprops:
 {{{
 	<UserMacro
 		Name="SofiaDir"
