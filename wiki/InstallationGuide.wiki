@@ -47,6 +47,16 @@ $ make
 $ make install
 }}}
 
+====Installed directory layout====
+By default project will be installed in /usr/local/unimrcp directory with the following layout
+{{{
+bin      - binaries (unimrcpserver, unimrcpclient)
+conf     - configuration files
+include  - header files
+libs     - shared (convenient) libraries
+plugins  - run-time loadable modules
+}}}
+
 ====Configure options====
   * To explicitly specify where to look for the APR and APR-util libraries use the "--with-apr=" and "--with-apr-util=" options:
     $ ./configure --with-apr=/usr/local/apr --with-apr-util=/usr/local/apr
@@ -90,13 +100,14 @@ $ make install
 }}}
 
 ====Build procedure====
-Open unimrcp.sln solution file and build it.
+  * Open unimrcp.sln solution file.
+  * Build prebuild.vcproj utility project (right click on tools -> prebuild in Solution Explorer and select Build from context menu).
+    This is a one-time output directory preparation. It copies all the required APR and SofiaSIP libraries and the default configuration to the output directory.
+  * Build the solution (Build -> Build Solution).
 
-====One-time post-build preparation (should be automated in the future)====
+====Output directory layout====
 {{{
-  Copy libapr-1.lib, libapr-1.exp, libapr-1.dll, libapr-1.pdb from $(AprDir)$(ConfigurationName) into $(SolutionDir)$(ConfigurationName)
-  Copy libaprutil-1.lib, libaprutil-1.exp, libaprutil-1.dll, libaprutil-1.pdb from $(AprUtilDir)$(ConfigurationName) into $(SolutionDir)$(ConfigurationName)
-  Copy libsofia_sip_ua.lib, libsofia_sip_ua.exp, libsofia_sip_ua.dll, libsofia_sip_ua.pdb from $(SofiaDir)\win32\libsofia-sip-ua\$(ConfigurationName) into $(SolutionDir)$(ConfigurationName)
-  Copy pthreadVC2.dll from $(SofiaDir)\win32\pthread into $(SolutionDir)$(ConfigurationName)
-  Copy unimrcpclient.xml and unimrcpserver.xml from $(SolutionDir)conf into $(SolutionDir)$(ConfigurationName)
+bin      - binaries (unimrcpserver, unimrcpclient) and all the required dlls
+conf     - configuration files
+plugins  - run-time loadable modules
 }}}
