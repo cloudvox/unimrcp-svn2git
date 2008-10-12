@@ -100,10 +100,11 @@ plugins  - run-time loadable modules
 }}}
 
 ====Build procedure====
-  * Open unimrcp.sln solution file.
-  * Build prebuild.vcproj utility project (right click on tools -> prebuild in Solution Explorer and select Build from context menu).
-    This is a one-time output directory preparation. It copies all the required APR and SofiaSIP libraries and the default configuration to the output directory.
-  * Build the solution (Build -> Build Solution).
+Open unimrcp.sln solution file and build the solution (Build -> Build Solution).
+
+====One-time pre-run preparation====
+Build prepare.vcproj utility project (right click on tools -> prebuild in Solution Explorer and select Build from context menu).
+This is a one-time output directory preparation. It copies all the required APR and SofiaSIP libraries and the default configuration to the output directory.
 
 ====Output directory layout====
 {{{
