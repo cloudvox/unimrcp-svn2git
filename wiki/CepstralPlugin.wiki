@@ -45,7 +45,8 @@ developer, the nature of your project, and we'll send you the SDK.
        />
 }}}
 
-Open unimrcp.sln solution file, enable mrcpcepstral project build from Build -> Configuration Menu and build the solution.
+Open unimrcp.sln solution file, enable mrcpcepstral project from Build -> Configuration Menu and build the solution. 
+Make sure swift.dll is in the execution path of unimrcpserver in case mrcpcepstral.dll failed to load on start-up.
 
 ==4. Configuration ==
 Specify mrcpcepstral as a plugin in unimrcpserver.xml as follows:
