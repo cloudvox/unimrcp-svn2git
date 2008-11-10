@@ -4,18 +4,24 @@
 = How to Download, Build and Install UniMRCP Project. =
 == Contents ==
 
-  # Obtain Source
-    * Download Source Tarball
-    * Checkout Source via SVN
-  # Build Source
-    * Requirements
-    * GNU Build (Linux and other Unix variants)
-    * VS2005 Build (Windows XP, Vista, ...)
+  # Install From Source
+    * Obtain Source
+      * Download Source Tarball
+      * Checkout Source via SVN
+    * Build Source
+      * Requirements
+      * GNU Build (Linux and other Unix variants)
+      * VS2005 Build (Windows XP, Vista, ...)
+  # Install Binary Package
+    * Windows Installer (Innosetup)
+      * Download Installer
+      * Run Installer
 
 
 
 == Details ==
-==1. Obtain Source ==
+==1. Install From Source ==
+===1.1. Obtain Source ===
 ===Download Source Tarball ===
 Use the link below to download one of the available source tarballs
     http://code.google.com/p/unimrcp/downloads/list
@@ -24,14 +30,14 @@ Use the link below to download one of the available source tarballs
 Use the command below to anonymously checkout the latest source code
     svn checkout http://unimrcp.googlecode.com/svn/trunk/ unimrcp
 
-==2. Build Source ==
+===1.2. Build Source ===
 ===Requirements ===
 UniMRCP depends on a number of third party tools and libraries,
 which must be installed prior to UniMRCP build.
 
-1. Apache Portable Runtime [>=1.2.x] (http://apr.apache.org/). Whenever you want to build any part of UniMRCP, you need the Apache Portable Runtime (APR) and the APR Utility (APR-util) libraries.
+  * Apache Portable Runtime [>=1.2.x] (http://apr.apache.org/). Whenever you want to build any part of UniMRCP, you need the Apache Portable Runtime (APR) and the APR Utility (APR-util) libraries.
 
-2. Sofia-SIP [>=1.12.6] (http://sofia-sip.sourceforge.net/). Sofia-SIP library is used to implement MRCPv2 specification compliant SIP signaling. Sofia-SIP is an open-source SIP User-Agent library, compliant with the IETF RFC3261 specification.
+  * Sofia-SIP [>=1.12.6] (http://sofia-sip.sourceforge.net/). Sofia-SIP library is used to implement MRCPv2 specification compliant SIP signaling. Sofia-SIP is an open-source SIP User-Agent library, compliant with the IETF RFC3261 specification.
 
 ===GNU Build (Linux and other Unix variants)===
 ====Additional requirements====
@@ -118,3 +124,18 @@ data     - data files
 log      - log files
 plugins  - run-time loadable modules
 }}}
+
+
+==2. Install Binary Package ==
+===Windows Installer (Innosetup)===
+===Download Installer ===
+Use the link below to download one of the available Windows installers
+    http://code.google.com/p/unimrcp/downloads/list
+===Run Installer ===
+There are number of options to install
+  * UniMRCP server
+    * Cepstral plugin    
+    * Demo synthesizer plugin    
+    * Demo recognizer plugin
+  * UniMRCP client
+If UniMRCP server option is enabled the installer also registers UniMRCP server as a Windows service, which can be started on demand.
