@@ -14,11 +14,10 @@
 
 
 
-
 == Details ==
 ==1. Obtain Source ==
 ===Download Source Tarball ===
-Use the link below to download source tarball
+Use the link below to download one of the available source tarballs
     http://code.google.com/p/unimrcp/downloads/list
 
 ===Checkout Source via SVN ===
@@ -52,9 +51,11 @@ By default project will be installed in /usr/local/unimrcp directory with the fo
 {{{
 bin      - binaries (unimrcpserver, unimrcpclient)
 conf     - configuration files
+data     - data files
 include  - header files
-libs     - shared (convenient) libraries
-plugins  - run-time loadable modules
+lib      - shared (convenient) libraries
+log      - log files
+plugin   - run-time loadable modules
 }}}
 
 ====Configure options====
@@ -67,6 +68,9 @@ plugins  - run-time loadable modules
 ====Makefile rules====
   * To install the default configuration use:
     $ make def-conf
+
+  * To install the default data use:
+    $ make def-data
 
   * To generate doxygen documentation from the source use:
     $ make dox
@@ -104,11 +108,13 @@ Open unimrcp.sln solution file and build the solution (Build -> Build Solution).
 
 ====One-time pre-run preparation====
 Build prepare.vcproj utility project (right click on tools -> prebuild in Solution Explorer and select Build from context menu).
-This is a one-time output directory preparation. It copies all the required APR and SofiaSIP libraries and the default configuration to the output directory.
+This is a one-time output directory preparation. It copies all the required APR and SofiaSIP libraries and the default configuration and data to the output directory.
 
 ====Output directory layout====
 {{{
 bin      - binaries (unimrcpserver, unimrcpclient) and all the required dlls
 conf     - configuration files
+data     - data files
+log      - log files
 plugins  - run-time loadable modules
 }}}
