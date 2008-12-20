@@ -1,0 +1,17 @@
+#summary UniMRCP Client Integration Guide.
+
+= How to Integrate UniMRCP Client Stack (libunimrcpclient) into Applications. =
+
+== Contents ==
+
+  # Client Stack Initialization
+    * Client Stack Creation 
+    * Application Creation 
+  # MRCP Session/Channel Management
+    * Session Creation 
+    * Channel Creation 
+  # MRCP Message Usage
+    * Message Construction 
+    * Header Allocation 
+
+== Details == 
