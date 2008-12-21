@@ -4,9 +4,11 @@
 
 == Contents ==
 
+  # Overview
   # Client Stack Initialization
     * Client Stack Creation 
     * Application Creation 
+    * Start of Processing 
   # MRCP Session/Channel Management
     * Session Creation 
     * Channel Creation 
@@ -15,3 +17,36 @@
     * Header Allocation 
 
 == Details == 
+
+==1. Overview ==
+This guide describes how to integrate UniMRCP client stack (libunimrcpclient) into 3-rd party applications to provide connectivity with MRCP v1/v2 compliant servers. The nature of applications may differ, perhaps the typical use cases are IVRs and PBXs.
+
+==2. Client Stack Initialization ==
+===2.1. Client Stack Creation === 
+Sample code below shows one-time creation of client stack.
+{{{
+#include "unimrcp_client.h"
+
+/* create default directory layout relative to root directory path */
+apt_dir_layout_t *dir_layout = apt_default_dir_layout_create(root_dir_path,pool);
+/* create client stack */
+mrcp_client_t *client = unimrcp_client_create(dir_layout);
+}}}
+
+===2.2. Application Creation === 
+One and more applications can be created and registered with client stack.
+{{{
+#include "mrcp_application.h"
+
+/* create application */
+mrcp_application_t *application = mrcp_application_create(app_message_handler,obj,pool);
+/* register it with client stack */
+mrcp_client_application_register(client,application,name);
+}}}
+
+===2.3. Start of Processing ===
+Start of message processing loop. Outgoing requests received from application context will be sent to MRCP server, while incoming responses and events received from MRCP server will be sent back to application context.
+{{{
+/* start client stack */
+mrcp_client_start(client);
+}}}
