@@ -50,3 +50,25 @@ Start of message processing loop. Outgoing requests received from application co
 /* start client stack */
 mrcp_client_start(client);
 }}}
+
+==3. MRCP Session/Channel Management ==
+===3.1. Session Creation === 
+{{{
+#include "mrcp_session.h"
+
+/* create session */
+mrcp_session_t *session = mrcp_application_session_create(application,profile,obj);
+}}}
+===3.2. Channel Creation === 
+{{{
+/* create synthesizer channel */
+mrcp_channel_t *channel = mrcp_application_channel_create(
+			session,                     /* session, channel belongs to */
+			MRCP_SYNTHESIZER_RESOURCE,   /* MRCP resource identifier */
+			termination,                 /* media termination, used to terminate audio stream */
+			NULL,                        /* RTP descriptor, used to create RTP termination (NULL by default) */
+			obj);                        /* object to associate */
+
+/* add channel to session (send asynchronous request) */
+mrcp_application_channel_add(session,channel);
+}}}
