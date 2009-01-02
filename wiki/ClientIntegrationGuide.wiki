@@ -5,25 +5,27 @@
 == Contents ==
 
   # Overview
-  # Client Stack Initialization
-    * Client Stack Creation 
-    * Application Creation 
-    * Start of Processing 
-  # MRCP Session/Channel Management
-    * Session Creation 
-    * Channel Creation 
-  # MRCP Message Usage
-    * Message Construction 
-    * Header Allocation 
+  # MRCP Client Stack Initialization
+    * Client Stack Instance Creation
+    * Application Instance Creation
+    * Start of Processing
+  # MRCP Session/Channel Initialization
+    * Session Instance Creation
+    * Channel Instance Creation
+  # MRCP Message Manipulation
+    * Message Creation
+    * Generic Header
+    * Resource Header
+    * Message Body
 
 == Details == 
 
 ==1. Overview ==
 This guide describes how to integrate UniMRCP client stack (libunimrcpclient) into 3-rd party applications to provide connectivity with MRCP v1/v2 compliant servers. The nature of applications may differ, perhaps the typical use cases are IVRs and PBXs.
 
-==2. Client Stack Initialization ==
-===2.1. Client Stack Creation === 
-Sample code below shows one-time creation of client stack.
+==2. MRCP Client Stack Initialization ==
+===2.1. Client Stack Instance Creation === 
+Sample code below shows one-time creation of client stack instance.
 {{{
 #include "unimrcp_client.h"
 
@@ -33,7 +35,7 @@ apt_dir_layout_t *dir_layout = apt_default_dir_layout_create(root_dir_path,pool)
 mrcp_client_t *client = unimrcp_client_create(dir_layout);
 }}}
 
-===2.2. Application Creation === 
+===2.2. Application Instance Creation ===
 One and more applications can be created and registered with client stack.
 {{{
 #include "mrcp_application.h"
@@ -47,22 +49,24 @@ mrcp_client_application_register(client,application,name);
 ===2.3. Start of Processing ===
 Start of message processing loop. Outgoing requests received from application context will be sent to MRCP server, while incoming responses and events received from MRCP server will be sent back to application context.
 {{{
-/* start client stack */
+/* start of client stack processing */
 mrcp_client_start(client);
 }}}
 
 ==3. MRCP Session/Channel Management ==
-===3.1. Session Creation === 
+Create MRCP session instance, then create one or more channels of different resource types within the session.
+===3.1. Session Instance Creation === 
 {{{
 #include "mrcp_session.h"
 
 /* create session */
 mrcp_session_t *session = mrcp_application_session_create(application,profile,obj);
 }}}
-===3.2. Channel Creation === 
+===3.2. Channel Instance Creation === 
 {{{
+mrcp_channel_t *channel;
 /* create synthesizer channel */
-mrcp_channel_t *channel = mrcp_application_channel_create(
+channel = mrcp_application_channel_create(
 			session,                     /* session, channel belongs to */
 			MRCP_SYNTHESIZER_RESOURCE,   /* MRCP resource identifier */
 			termination,                 /* media termination, used to terminate audio stream */
@@ -71,4 +75,57 @@ mrcp_channel_t *channel = mrcp_application_channel_create(
 
 /* add channel to session (send asynchronous request) */
 mrcp_application_channel_add(session,channel);
+
+/* create recognizer channel */
+channel = mrcp_application_channel_create(
+			session,                     /* session, channel belongs to */
+			MRCP_RECOGNIZER_RESOURCE,    /* MRCP resource identifier */
+			termination,                 /* media termination, used to terminate audio stream */
+			NULL,                        /* RTP descriptor, used to create RTP termination (NULL by default) */
+			obj);                        /* object to associate */
+
+/* add channel to session (send asynchronous request) */
+mrcp_application_channel_add(session,channel);
+}}}
+
+==4. MRCP Message Manipulation ==
+===4.1. Message Creation === 
+{{{
+/* create MRCP request within application context */
+mrcp_message_t *mrcp_message = mrcp_application_message_create(session,channel,method_id);
+}}}
+===4.2. Generic Header ===
+{{{
+mrcp_generic_header_t *generic_header;
+/* get/allocate generic header */
+generic_header = mrcp_generic_header_prepare(mrcp_message);
+/* set CONTENT-TYPE field */
+apt_string_assign(&generic_header->content_type,"application/synthesis+ssml",mrcp_message->pool);
+mrcp_generic_header_property_add(mrcp_message,GENERIC_HEADER_CONTENT_TYPE);
+}}}
+===4.3. Resource Header ===
+Synthesizer header
+{{{
+mrcp_synth_header_t *synth_header;
+/* get/allocate resource header */
+synth_header = mrcp_resource_header_prepare(mrcp_message);
+/* set VOICE-AGE field */
+synth_header->voice_param.age = 25;
+mrcp_resource_header_property_add(mrcp_message,SYNTHESIZER_HEADER_VOICE_AGE);
+}}}
+
+Recognizer header
+{{{
+mrcp_recog_header_t *recog_header;
+/* get/allocate resource header */
+recog_header = mrcp_resource_header_prepare(mrcp_message);
+/* set CANCEL-IF-QUEUE field */
+recog_header->cancel_if_queue = FALSE;
+mrcp_resource_header_property_add(mrcp_message,RECOGNIZER_HEADER_CANCEL_IF_QUEUE);
+}}}
+
+===4.4. Message Body ===
+{{{
+/* set message body/content */
+apt_string_assign(&mrcp_message->body,"actual content goes here",mrcp_message->pool);
 }}}
