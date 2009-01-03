@@ -6,21 +6,28 @@
 
   # Overview
   # MRCP Client Stack Initialization
-    * Client Stack Instance Creation
-    * Application Instance Creation
-    * Start of Processing
+    * Create client stack
+    * Create application
+    * Start client stack processing
   # MRCP Session Initialization
-    * Session Instance Creation
-    * Channel Instance Creation
-    * Session Offer/Answer
+    * Create session
+    * Create channel
+    * Add channel
   # MRCP Message Manipulation
-    * Message Creation
-    * Generic Header
-    * Resource Header
-    * Message Body
+    * Create message
+    * Generic header
+    * Resource header
+    * Message body
   # MRCP Message Management
-    * Sending Request
-    * Receiving Response/Event
+    * Send request
+    * Receive response/event
+  # MRCP Session Deinitialization
+    * Remove channel [optional]
+    * Terminate session
+    * Destroy session
+  # MRCP Client Stack Deinitialization
+    * Shutdown client stack processing
+    * Destroy client stack
 
 == Details == 
 
@@ -28,7 +35,7 @@
 This guide describes how to integrate UniMRCP client stack (libunimrcpclient) into 3-rd party applications to provide connectivity with MRCP v1/v2 compliant servers. The nature of applications may differ, perhaps the typical use cases are IVRs and PBXs.
 
 ==2. MRCP Client Stack Initialization ==
-=== Client Stack Instance Creation === 
+=== Create client stack === 
 Sample code below shows one-time creation of client stack instance.
 {{{
 #include "unimrcp_client.h"
@@ -39,7 +46,7 @@ apt_dir_layout_t *dir_layout = apt_default_dir_layout_create(root_dir_path,pool)
 mrcp_client_t *client = unimrcp_client_create(dir_layout);
 }}}
 
-=== Application Instance Creation ===
+=== Create application ===
 One and more applications can be created and registered with client stack.
 {{{
 #include "mrcp_application.h"
@@ -50,26 +57,26 @@ mrcp_application_t *application = mrcp_application_create(app_message_handler,ob
 mrcp_client_application_register(client,application,name);
 }}}
 
-=== Start of Processing ===
+=== Start client stack processing ===
 Start of message processing loop. Outgoing requests received from application context will be sent to MRCP server, while incoming responses and events received from MRCP server will be sent back to application context.
 {{{
 /* asynchronous start of client stack processing */
 mrcp_client_start(client);
 
-/* event raised for each registered application to indicate that client stack is started and ready to process requests from the application */
+/* event will be raised for each registered application to indicate that client stack is started and ready to process requests from the application */
 on_ready(application,status);
 }}}
 
 ==3. MRCP Session Initialization ==
-Create MRCP session instance, then create one or more channels of different resource types within the session.
-=== Session Instance Creation === 
+Create MRCP session, then create one or more channels of different resource types within the session.
+=== Create session === 
 {{{
 #include "mrcp_session.h"
 
 /* create session */
 mrcp_session_t *session = mrcp_application_session_create(application,profile,obj);
 }}}
-=== Channel Instance Creation ===
+=== Create channel ===
 {{{
 mrcp_channel_t *channel;
 /* create synthesizer channel */
@@ -89,7 +96,7 @@ channel = mrcp_application_channel_create(
 			obj);                        /* object to associate */
 }}}
 
-=== Session Offer/Answer ===
+=== Add channel ===
 Session/channel offer.
 {{{
 /* add channel to session (non-blocking asynchronous processing) */
@@ -103,12 +110,12 @@ on_channel_add(application,session,channel,status);
 }}}
 
 ==4. MRCP Message Manipulation ==
-=== Message Creation === 
+=== Create message === 
 {{{
 /* create MRCP request within application context */
 mrcp_message_t *mrcp_message = mrcp_application_message_create(session,channel,method_id);
 }}}
-=== Generic Header ===
+=== Generic header ===
 {{{
 mrcp_generic_header_t *generic_header;
 /* get/allocate generic header */
@@ -117,7 +124,7 @@ generic_header = mrcp_generic_header_prepare(mrcp_message);
 apt_string_assign(&generic_header->content_type,"application/synthesis+ssml",mrcp_message->pool);
 mrcp_generic_header_property_add(mrcp_message,GENERIC_HEADER_CONTENT_TYPE);
 }}}
-=== Resource Header ===
+=== Resource header ===
 Synthesizer header
 {{{
 mrcp_synth_header_t *synth_header;
@@ -138,20 +145,47 @@ recog_header->cancel_if_queue = FALSE;
 mrcp_resource_header_property_add(mrcp_message,RECOGNIZER_HEADER_CANCEL_IF_QUEUE);
 }}}
 
-=== Message Body ===
+=== Message body ===
 {{{
 /* set message body/content */
 apt_string_assign(&mrcp_message->body,"actual content goes here",mrcp_message->pool);
 }}}
 
 ==5. MRCP Message Management ==
-=== Sending Request ===
+=== Send request ===
 {{{
 /* send MRCP request (non-blocking, asynchronous processing) */
 mrcp_application_message_send(session,channel,message);
 }}}
-=== Receiving Response/Event ===
+=== Receive response/event ===
 {{{
 /* function below from mrcp_app_message_dispatcher_t interface is called to raise MRCP response or event to application context */
 on_message_receive(application,session,channel,message);
+}}}
+
+==6. MRCP Session Deinitialization ==
+
+=== Remove channel [optional] ===
+{{{
+mrcp_application_channel_remove(session,channel);
+}}}
+
+=== Terminate session ===
+{{{
+mrcp_application_session_terminate(session)
+}}}
+
+=== Destroy session ===
+{{{
+mrcp_application_session_destroy(session);
+}}}
+
+==7. MRCP Session Deinitialization ==
+=== Shutdown client stack processing ===
+{{{
+mrcp_client_shutdown(client);
+}}}
+=== Destroy client stack ===
+{{{
+mrcp_client_destroy(client);
 }}}
