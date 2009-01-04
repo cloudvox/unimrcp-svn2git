@@ -12,7 +12,7 @@
   # MRCP Session Initialization
     * Create session
     * Create channel
-    * Add channel
+    * Add/enable channel
   # MRCP Message Manipulation
     * Create message
     * Generic header
@@ -20,14 +20,17 @@
     * Message body
   # MRCP Message Management
     * Send request
-    * Receive response/event
+    * Receive response or event
   # MRCP Session Deinitialization
-    * Remove channel [optional]
+    * Remove/disable channel
     * Terminate session
     * Destroy session
   # MRCP Client Stack Deinitialization
     * Shutdown client stack processing
     * Destroy client stack
+  # References
+    * Demo unimrcpclient application
+    * Design concepts
 
 == Details == 
 
@@ -62,8 +65,10 @@ Start of message processing loop. Outgoing requests received from application co
 {{{
 /* asynchronous start of client stack processing */
 mrcp_client_start(client);
-
-/* event will be raised for each registered application to indicate that client stack is started and ready to process requests from the application */
+}}}
+Asynchronous event raised from client stack context to the registered application indicates client stack is started and ready to process requests from the application.
+{{{
+/* mrcp_app_message_dispatcher_t interface */
 on_ready(application,status);
 }}}
 
@@ -97,13 +102,13 @@ channel = mrcp_application_channel_create(
 }}}
 
 === Add channel ===
-Session/channel offer.
+Client stack sends offer to MRCP server to add/enable channel.
 {{{
 /* add channel to session (non-blocking asynchronous processing) */
 mrcp_application_channel_add(session,channel);
 }}}
 
-Session/channel answer.
+Client stack receives answer from MRCP server.
 {{{
 /* function below from mrcp_app_message_dispatcher_t interface is called to raise answer to application context */
 on_channel_add(application,session,channel,status);
@@ -157,7 +162,7 @@ apt_string_assign(&mrcp_message->body,"actual content goes here",mrcp_message->p
 /* send MRCP request (non-blocking, asynchronous processing) */
 mrcp_application_message_send(session,channel,message);
 }}}
-=== Receive response/event ===
+=== Receive response or event ===
 {{{
 /* function below from mrcp_app_message_dispatcher_t interface is called to raise MRCP response or event to application context */
 on_message_receive(application,session,channel,message);
@@ -165,22 +170,34 @@ on_message_receive(application,session,channel,message);
 
 ==6. MRCP Session Deinitialization ==
 
-=== Remove channel [optional] ===
+=== Remove channel ===
+Optionally channel can be removed from session.
+Client stack sends offer to MRCP server to remove/disable channel.
 {{{
 mrcp_application_channel_remove(session,channel);
 }}}
+Client stack receives answer.
+{{{
+on_channel_remove(session,channel);
+}}}
 
 === Terminate session ===
+Client stack sends offer to MRCP server to terminate session.
 {{{
 mrcp_application_session_terminate(session)
 }}}
+Client stack receives answer from MRCP server.
+{{{
+on_session_terminate(application,session,status);
+}}}
 
 === Destroy session ===
+Session must be terminated before destruction.
 {{{
 mrcp_application_session_destroy(session);
 }}}
 
-==7. MRCP Session Deinitialization ==
+==7. MRCP Client Stack Deinitialization ==
 === Shutdown client stack processing ===
 {{{
 mrcp_client_shutdown(client);
@@ -189,3 +206,7 @@ mrcp_client_shutdown(client);
 {{{
 mrcp_client_destroy(client);
 }}}
+
+==8. References ==
+  * Demo application built on top of libunimrcpclient library can be found in the [http://code.google.com/p/unimrcp/source/browse/#svn/trunk/platforms/unimrcp-client platforms/unimrcp-client] directory of the source tree.
+  * UML based [http://unimrcp.webhosting-for-free.com/ea/index.htm design concepts] include hierarchy, activity and sequence diagrams of the client stack.
