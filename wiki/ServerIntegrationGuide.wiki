@@ -1,0 +1,10 @@
+#summary UniMRCP Server Integration Guide.
+
+<wiki:toc max_depth="2"/>
+
+=1. Overview =
+This guide describes how to integrate [http://code.google.com/p/unimrcp/source/browse/#svn/trunk/platforms/libunimrcp-client UniMRCP server library] into 3-rd party applications to provide MRCP v1/v2 server capabilities. Perhaps stand alone UniMRCP server application built on top of UniMRCP client library can be used instead.
+
+=2. Server Stack Initialization =
+=3. Server Stack Deinitialization =
+=4. References =
