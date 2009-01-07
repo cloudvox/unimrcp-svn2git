@@ -1,0 +1,7 @@
+#summary UniMRCP Server Plugin Implementation Guide.
+#labels Id-6
+
+<wiki:toc max_depth="2"/>
+
+=1. Overview =
+This guide describes how to implement UniMRCP server plugin.
