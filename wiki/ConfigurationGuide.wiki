@@ -1,21 +1,14 @@
 #summary UniMRCP Configuration Guide.
 #labels Featured,Id-2
 
-= How to Configure UniMRCP Client and Server. =
-== Contents ==
+<wiki:toc max_depth="3"/>
 
-  # Overview
-  # Client Configuration
-  # Server Configuration
-
-== Details ==
-
-==1. Overview ==
+=1. Overview =
 This guide describes how to configure UniMRCP client and server. It assumes UniMRCP is already installed, otherwise proceed with the [InstallationGuide installation] first. UniMRCP uses XML based configuration for both client and server. The default configuration files [http://code.google.com/p/unimrcp/source/browse/trunk/conf/unimrcpclient.xml unimrcpclient.xml] and [http://code.google.com/p/unimrcp/source/browse/trunk/conf/unimrcpserver.xml unimrcpserver.xml] are located in the conf directory of the source tree.
 
-==2. Client Configuration ==
-===2.1. Settings ===
-==== Signaling Agents ====
+=2. Client Configuration =
+==2.1. Settings ==
+=== Signaling Agents ===
 One or more SIP/MRCPv2 and/or RTSP/MRCPv1 signaling agents must be specified. Each signaling agent must be assigned an unique name and a class identifier.
 The following is an example of MRCPv2 SofiaSIP signaling agent:
 {{{
@@ -36,7 +29,7 @@ The following is an example of MRCPv1 UniRTSP signaling agent:
       </agent>
 }}}
 
-==== Connection Agents (MRCPv2 only) ====
+=== Connection Agents (MRCPv2 only) ===
 One or more MRCPv2 connection agents must be specified. Each connection agent must be assigned an unique name. The following is an example of MRCPv2 connection agent:
 {{{
       <agent name="MRCPv2-Agent-1">
@@ -44,13 +37,13 @@ One or more MRCPv2 connection agents must be specified. Each connection agent mu
       </agent>
 }}}
 
-==== Media Engines ====
+=== Media Engines ===
 One or more media processing engines must be specified. Each media engine must be assigned an unique name. No media engine might be specified in case external media processing is used (bypass media mode). The following is an example of media engine:
 {{{
       <engine name="Media-Engine-1"/>
 }}}
 
-==== RTP Termination Factories ====
+=== RTP Termination Factories ===
 One or more RTP termination factories must be specified. Each factory must be assigned an unique name. No factory might be specified in case external media processing is used (bypass media mode). The following is an example of RTP termination factory:
 {{{
       <rtp name="RTP-Factory-1">
@@ -66,7 +59,7 @@ One or more RTP termination factories must be specified. Each factory must be as
 
 Note: By default "auto" directive is used wherever the local IP address to bind to must be specified. In this case IP address is automatically guessed. However it may cause some delay on startup. You may want to explicitly specify the IP address in order to speedup the startup or in case the guessed IP address is incorrect.
 
-===2.2. Profiles ===
+==2.2. Profiles ==
 Profiles are collection of settings. Each profile includes one of signaling, connection agents, etc. Each profile must be assigned an unique name to be referenced by. Multiple profiles can be used at the same time to provide connectivity to several MRCPv2 and/or MRCPv1 servers. It's up to actual application based on UniMRCP client to specify which of the existing profiles to use upon creation of new MRCP session.
 The following is an example of MRCPv2 profile:
 {{{
@@ -89,9 +82,9 @@ The following is an example of MRCPv1 profile:
 }}}
 
 
-==3. Server Configuration ==
-===3.1. Settings ===
-==== Signaling Agents ====
+=3. Server Configuration =
+==3.1. Settings ==
+=== Signaling Agents ===
 One or more SIP/MRCPv2 and/or RTSP/MRCPv1 signaling agents must be specified. Each signaling agent must be assigned an unique name and a class identifier.
 The following is an example of MRCPv2 SofiaSIP signaling agent:
 {{{
@@ -109,7 +102,7 @@ The following is an example of MRCPv1 UniRTSP signaling agent:
       </agent>
 }}}
 
-==== Connection Agents (MRCPv2 only) ====
+=== Connection Agents (MRCPv2 only) ===
 One or more MRCPv2 connection agents must be specified. Each connection agent must be assigned an unique name. The following is an example of MRCPv2 connection agent:
 {{{
       <agent name="MRCPv2-Agent-1">
@@ -119,13 +112,13 @@ One or more MRCPv2 connection agents must be specified. Each connection agent mu
       </agent>
 }}}
 
-==== Media Engines ====
+=== Media Engines ===
 One or more media processing engines must be specified. Each media engine must be assigned an unique name. The following is an example of media engine:
 {{{
       <engine name="Media-Engine-1"/>
 }}}
 
-==== RTP Termination Factories ====
+=== RTP Termination Factories ===
 One or more RTP termination factories can be specified. Each factory must be assigned an unique name. The following is an example of RTP termination factory:
 {{{
       <rtp name="RTP-Factory-1">
@@ -137,19 +130,19 @@ One or more RTP termination factories can be specified. Each factory must be ass
       </rtp>
 }}}
 
-==== MRCP Resource Engines (Plugins) ====
+=== MRCP Resource Engines (Plugins) ===
 Engines provide back-end for the MRCP resources (synthesizer,recognizer,...) implementing UniMRCP abstract resource engine interface. Engines are integrated into UniMRCP server as plugins. One or more engines (plugins) must be provided to every MRCP resource. Each engine must be assigned an unique name and a class identifier. Class identifier is used to construct the name of the plugin. The way name of the plugin is constructed and the directory where the plugin is looked for are platform dependent. For instance, if class identifier of an engine is "demosynth", the name of the plugin would be "demosynth.dll" for Windows and "demosynth.so" for Linux.
 The following example specifies two demo engines (plugins):
 {{{ 
     <plugin>
-      <engine name="Demo-Synth-1" class="demosynth"/>
-      <engine name="Demo-Recog-1" class="demorecog"/>
+      <engine name="Demo-Synth-1" class="demosynth" enable="1"/>
+      <engine name="Demo-Recog-1" class="demorecog" enable="1"/>
     </plugin>
 }}}
 
 Note: By default "auto" directive is used wherever the local IP address to bind to must be specified. In this case IP address is automatically guessed. However it may cause some delay on startup. You may want to explicitly specify the IP address in order to speedup the startup or in case the guessed IP address is incorrect.
 
-===3.2. Profiles ===
+==3.2. Profiles ==
 Profiles are collection of settings. Each profile includes one of signaling, connection agents, etc. Each profile must be assigned an unique name to be referenced by. Multiple profiles may exist. One profile may provide MRCPv2 capabilities, the second - MRCPv1, while yet others - MRCPv2 or MRCPv1 with somewhat different settings. It depends on the signaling agent MRCP session is established by which profile to use.
 The following is an example of MRCPv2 profile:
 {{{
