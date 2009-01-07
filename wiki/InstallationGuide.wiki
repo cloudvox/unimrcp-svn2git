@@ -1,27 +1,10 @@
 #summary UniMRCP Installation Guide.
 #labels Featured,Id-1
 
-= How to Download, Build and Install UniMRCP Project. =
-== Contents ==
+<wiki:toc max_depth="3" />
 
-  # Install From Source
-    * Obtain Source
-      * Download Source Tarball
-      * Checkout Source via SVN
-    * Build Source
-      * Requirements
-      * GNU Build (Linux and other Unix variants)
-      * VS2005 Build (Windows XP, Vista, ...)
-  # Install Binary Package
-    * Windows Installer (Innosetup)
-      * Download Installer
-      * Run Installer
-
-
-
-== Details ==
-==1. Install From Source ==
-===1.1. Obtain Source ===
+=1. Install From Source =
+==1.1. Obtain Source ==
 ===Download Source Tarball ===
 Use the link below to download one of the available source tarballs
     http://code.google.com/p/unimrcp/downloads/list
@@ -30,7 +13,7 @@ Use the link below to download one of the available source tarballs
 Use the command below to anonymously checkout the latest source code
     svn checkout http://unimrcp.googlecode.com/svn/trunk/ unimrcp
 
-===1.2. Build Source ===
+==1.2. Build Source ==
 ===Requirements ===
 UniMRCP depends on a number of third party tools and libraries,
 which must be installed prior to UniMRCP build.
@@ -126,8 +109,8 @@ plugins  - run-time loadable modules
 }}}
 
 
-==2. Install Binary Package ==
-===Windows Installer (Innosetup)===
+=2. Install Binary Package =
+==Windows Installer (Innosetup)==
 ===Download Installer ===
 Use the link below to download one of the available Windows installers
     http://code.google.com/p/unimrcp/downloads/list
