@@ -25,7 +25,10 @@ which must be installed prior to UniMRCP build.
 ===GNU Build (Linux and other Unix variants)===
 ====Additional requirements====
   * autoconf 2.57 or newer
+  * automake
   * libtool 1.4 or newer
+  * gcc
+  * pkg-config
 
 ====Build procedure====
 {{{
