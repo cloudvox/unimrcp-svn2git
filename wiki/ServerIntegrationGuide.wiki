@@ -4,8 +4,26 @@
 <wiki:toc max_depth="2"/>
 
 =1. Overview =
-This guide describes how to integrate [http://code.google.com/p/unimrcp/source/browse/#svn/trunk/platforms/libunimrcp-client UniMRCP server library] into 3-rd party applications to provide MRCP v1/v2 server capabilities. Perhaps stand alone UniMRCP server application built on top of UniMRCP client library can be used instead.
+This guide describes how to integrate [http://code.google.com/p/unimrcp/source/browse/#svn/trunk/platforms/libunimrcp-server UniMRCP server library] into 3-rd party applications to provide MRCP v1/v2 server capabilities. Perhaps stand alone UniMRCP server application built on top of UniMRCP server library can be used instead.
 
 =2. Server Stack Initialization =
+== Start server stack processing ==
+Sample code below shows one-time creation of server stack instance.
+{{{
+#include "unimrcp_server.h"
+
+/* create default directory layout relative to root directory path */
+apt_dir_layout_t *dir_layout = apt_default_dir_layout_create(root_dir_path,pool);
+/* start server stack processing */
+mrcp_server_t *server = unimrcp_server_start(dir_layout);
+}}}
+
 =3. Server Stack Deinitialization =
+== Shutdown server stack processing ==
+{{{
+/* shutdown server stack processing */
+unimrcp_server_shutdown(server);
+}}}
 =4. References =
+  * Fully functional unimrcpserver application built on top of libunimrcpserver library can be found in the [http://code.google.com/p/unimrcp/source/browse/#svn/trunk/platforms/unimrcp-server platforms/unimrcp-server] directory of the source tree.
+  * UML based [http://unimrcp.webhosting-for-free.com/ea/index.htm design concepts] include hierarchy, activity and sequence diagrams of the server stack.
