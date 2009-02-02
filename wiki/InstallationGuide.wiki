@@ -1,4 +1,4 @@
-#summary UniMRCP Installation Guide.
+#summary How to install UniMRCP project.
 #labels Featured,Id-1
 
 <wiki:toc max_depth="3" />

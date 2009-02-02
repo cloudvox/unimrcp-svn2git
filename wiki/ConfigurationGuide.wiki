@@ -1,4 +1,4 @@
-#summary UniMRCP Configuration Guide.
+#summary Overview of UniMRCP configuration file format.
 #labels Featured,Id-2
 
 <wiki:toc max_depth="3"/>

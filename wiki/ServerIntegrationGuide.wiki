@@ -1,4 +1,4 @@
-#summary UniMRCP Server Integration Guide.
+#summary How to use UniMRCP server library.
 #labels Id-5
 
 <wiki:toc max_depth="2"/>

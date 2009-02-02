@@ -1,4 +1,4 @@
-#summary Cepstral Plugin Integration Guide.
+#summary How to integrate Cepstral TTS plugin into UniMRCP server.
 #labels Id-3
 
 <wiki:toc max_depth="2" />
