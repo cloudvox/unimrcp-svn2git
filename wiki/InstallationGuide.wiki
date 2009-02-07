@@ -111,7 +111,8 @@ log      - log files
 plugins  - run-time loadable modules
 }}}
 
-
+<br>
+<br>
 =2. Install Binary Package =
 ==Windows Installer (Innosetup)==
 ===Download Installer ===
@@ -125,3 +126,14 @@ There are number of options to install
     * Demo recognizer plugin
   * UniMRCP client
 If UniMRCP server option is enabled the installer also registers UniMRCP server as a Windows service, which can be started on demand.
+
+<br>
+<br>
+=3. Run Demo Client and Server =
+Test your installation running UniMRCP client and server applications from the same host using the configuration installed by default.
+  * Change dir (cd) to the directory, where UniMRCP binaries are installed
+  * Run unimrcpclient and unimrcpserver
+  * Input 'help' from the console of unimrcpclient application for usage
+  * Input 'run synth' to run demo synthesizer scenario
+  * Input 'run recog' to run demo recognizer scenario
+  * Check the console output and find the results such as synthesized speech and recorded utterance in the data directory
