@@ -1,11 +1,12 @@
-#summary Overview of UniMRCP configuration file format.
+#summary How to configure UniMRCP client and server.
 #labels Featured,Id-2
 
 <wiki:toc max_depth="3"/>
 
 =1. Overview =
 This guide describes how to configure UniMRCP client and server. It assumes UniMRCP is already installed, otherwise proceed with the [InstallationGuide installation] first. UniMRCP uses XML based configuration for both client and server. The default configuration files [http://code.google.com/p/unimrcp/source/browse/trunk/conf/unimrcpclient.xml unimrcpclient.xml] and [http://code.google.com/p/unimrcp/source/browse/trunk/conf/unimrcpserver.xml unimrcpserver.xml] are located in the conf directory of the source tree.
-
+<br>
+<br>
 =2. Client Configuration =
 ==2.1. Settings ==
 === Signaling Agents ===
@@ -80,8 +81,8 @@ The following is an example of MRCPv1 profile:
     </profile>
 
 }}}
-
-
+<br>
+<br>
 =3. Server Configuration =
 ==3.1. Settings ==
 === Signaling Agents ===
