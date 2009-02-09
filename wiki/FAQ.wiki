@@ -4,9 +4,18 @@
 <wiki:toc max_depth="4"/>
 ====  What is UniMRCP? ====
 UniMRCP is an open source cross-platform implementation of Media Resource Control Protocol (MRCP).
-====  What license UniMRCP is released under? Can I use UniMRCP in closed source commercial projects. ====
-UniMRCP is released under Apache 2.0 license. Open as well as closed source commercial UniMRCP based solutions may exist.
+====  What version of MRCP does project support? ====
+UniMRCP supports both MRCPv1 and MRCPv2.
 ====  What platforms (operating systems) does UniMRCP run on? ====
 UniMRCP has been actively developed and tested on Windows (XP, Vista) and Linux distributions (Fedora, CentOS).
 Overall project should run on platforms APR supports (Unix variants, Windows, Mac OSX, OS/2, Netware).
+====  What license UniMRCP is released under? Can I use UniMRCP in closed source commercial projects? ====
+UniMRCP is released under Apache 2.0 license. Open as well as closed source, commercial UniMRCP based solutions may exist.
+====  I'm very new to UniMRCP. Where should I start? ====
+Read [InstallationGuide Installation Guide] first.
+====  I'm looking for MRCP client to integrate into my application. What should I use? ====
+In brief, you should use libunimrclient library. Also check demo unimrcpclient application, which is based on libunimrcpclient library. Read [ClientIntegrationGuide Client Integration Guide] for the detailed instructions.
+====  I'm looking for MRCP server for my ASR/TTS engine. What should I do? ====
+In brief, you should write another plugin for unimrcpserver using your ASR/TTS engine. There are number of plugins available in the source tree. Read [PluginImplementationGuide Plugin Implementation Guide] for the detailed instructions.
+
 ==== More questions to come. ====
