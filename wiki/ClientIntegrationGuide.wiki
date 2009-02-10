@@ -1,11 +1,12 @@
 #summary How to use UniMRCP client library.
-#labels Id-4
 
 <wiki:toc max_depth="2"/>
-
+<br>
+<br>
 =1. Overview =
 This guide describes how to integrate [http://code.google.com/p/unimrcp/source/browse/#svn/trunk/platforms/libunimrcp-client UniMRCP client library] into 3-rd party applications to provide connectivity with MRCP v1/v2 compliant servers. The nature of applications may differ, perhaps the typical use cases are IVRs and PBXs.
-
+<br>
+<br>
 =2. Client Stack Initialization =
 == Create client stack ==
 Sample code below shows one-time creation of client stack instance.
@@ -40,7 +41,8 @@ Asynchronous event raised from client stack context to the registered applicatio
 /* mrcp_app_message_dispatcher_t interface */
 on_ready(application,status);
 }}}
-
+<br>
+<br>
 =3. Session Initialization =
 Create MRCP session, then create one or more channels of different resource types within the session.
 == Create session ==
@@ -82,7 +84,8 @@ Client stack receives answer from MRCP server.
 /* function below from mrcp_app_message_dispatcher_t interface is called to raise answer to application context */
 on_channel_add(application,session,channel,status);
 }}}
-
+<br>
+<br>
 =4. Message Construction =
 == Create message ==
 {{{
@@ -127,7 +130,8 @@ mrcp_resource_header_property_add(mrcp_message,RECOGNIZER_HEADER_CANCEL_IF_QUEUE
 /* set message body/content */
 apt_string_assign(&mrcp_message->body,"actual content goes here",mrcp_message->pool);
 }}}
-
+<br>
+<br>
 =5. Message Management =
 == Send request ==
 {{{
@@ -139,7 +143,8 @@ mrcp_application_message_send(session,channel,message);
 /* function below from mrcp_app_message_dispatcher_t interface is called to raise MRCP response or event to application context */
 on_message_receive(application,session,channel,message);
 }}}
-
+<br>
+<br>
 =6. Session Deinitialization =
 
 == Remove channel ==
@@ -168,7 +173,8 @@ Session must be terminated before destruction.
 {{{
 mrcp_application_session_destroy(session);
 }}}
-
+<br>
+<br>
 =7. Client Stack Deinitialization =
 == Shutdown client stack processing ==
 {{{
@@ -178,7 +184,21 @@ mrcp_client_shutdown(client);
 {{{
 mrcp_client_destroy(client);
 }}}
-
+<br>
+<br>
 =8. References =
   * Demo application built on top of libunimrcpclient library can be found in the [http://code.google.com/p/unimrcp/source/browse/#svn/trunk/platforms/unimrcp-client platforms/unimrcp-client] directory of the source tree.
   * UML based [http://unimrcp.webhosting-for-free.com/ea/index.htm design concepts] include hierarchy, activity and sequence diagrams of the client stack.
+<br>
+<br>
+=9. F.A.Q. =
+  * What is unimrcpclient application?
+    It is just a demo application based on libunimrcpclient library. Demo application is capable to run typical synthesizer and recognizer scenarios.
+  * Should I use demo framework introduced in demo application?
+    No, you shouldn't.
+  * Should I create new instance of client stack (mrcp_client_t) for each MRCP session (mrcp_session_t)?
+    No, one instance of client stack can and should be used for creating multiple MRCP sessions.
+  * What is mrcp_application_t and can I register multiple mrcp_application_t instances to mrcp_client_t stack?
+    You must create and register at least one intsance of mrcp_application_t on start up. It's logical and base representation of your application, which provides communication with client stack. You can have more than one mrcp_application_t instances registered if needed.
+  * What is message dispatcher interface (mrcp_app_message_dispatcher_t) and why isn't it handled internally in client stack?
+    You must register callback (mrcp_app_message_handler_f) to receive responses and events from client stack. Responses and events are delivered in messages (mrcp_app_message_t ), which must be further dispatched and processed. Depending on internal architecture of your application you may need to process the messages within the context of the thread callback is raised from or pass messages to the thread safe context of your application and only then process them.
