@@ -18,8 +18,8 @@ In brief, you should use libunimrclient library. Also check demo unimrcpclient a
 ====  I'm looking for MRCP server for my ASR/TTS engine. What should I do? ====
 In brief, you should write another plugin for unimrcpserver using your ASR/TTS engine. There are number of plugins available in the source tree. Read [PluginImplementationGuide Plugin Implementation Guide] for the detailed instructions.
 ====  I've got some ideas around the project. Where can I discuss them? ====
-Use [http://groups.google.com/group/unimrcp discussion group] for anything concerning UniMRCP.
+Use [http://groups.google.com/group/unimrcp Discussion Group] for anything concerning UniMRCP.
 ====  I've got some issues using the project. What should I do? ====
-Feel free to generate issues using [http://code.google.com/p/unimrcp/issues/ issue tracker].
+Feel free to generate issues using [http://code.google.com/p/unimrcp/issues/ Issue Tracker].
 
 ==== More questions to come. ====
