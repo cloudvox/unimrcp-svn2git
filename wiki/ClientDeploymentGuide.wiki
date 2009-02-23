@@ -32,3 +32,39 @@ _Configuration_: [http://sites.google.com/a/unimrcp.org/unimrcp/clientdeployment
 _Sample Network Captures_: [http://sites.google.com/a/unimrcp.org/unimrcp/clientdeploymentdata/mrcp-tts2.pcap?attredirects=0 mrcp-tts.pcap] [http://sites.google.com/a/unimrcp.org/unimrcp/clientdeploymentdata/mrcp-asr2.pcap?attredirects=0 mrcp-asr.pcap]
 <br>
 <br>
+
+=== Deployment 3 ===
+Setup: UniMRCP client is behind NAT and it allows to connect to MRCPv1 server.
+<br>
+<br>
+http://sites.google.com/a/unimrcp.org/unimrcp/clientdeploymentdata/ea3.png?attredirects=0
+
+_Configuration_:
+
+_Sample Network Captures_:
+<br>
+<br>
+
+=== Deployment 4 ===
+Setup: UniMRCP client is behind NAT and it allows to connect to MRCPv2 server.
+<br>
+<br>
+http://sites.google.com/a/unimrcp.org/unimrcp/clientdeploymentdata/ea4.png?attredirects=0
+
+_Configuration_:
+
+_Sample Network Captures_:
+<br>
+<br>
+
+=== Deployment 5 ===
+Setup: UniMRCP client allows to connect to multiple MRCPv1 and MRCPv2 servers.
+<br>
+<br>
+http://sites.google.com/a/unimrcp.org/unimrcp/clientdeploymentdata/ea5.png?attredirects=0
+
+_Configuration_:
+
+_Sample Network Captures_:
+<br>
+<br>
