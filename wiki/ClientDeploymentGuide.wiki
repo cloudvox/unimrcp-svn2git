@@ -1,0 +1,34 @@
+#summary How to deploy UniMRCP client.
+#labels Id-8
+
+<wiki:toc max_depth="3"/>
+<br>
+<br>
+==1. Overview ==
+This guide describes how to deploy UniMRCP client by providing typical setups, appropriate configurations and sample network captures.
+
+<br>
+==2. Deployments ==
+=== Deployment 1 ===
+_Setup_: UniMRCP client allows to connect to MRCPv1 server. Both are on the same LAN.
+<br>
+<br>
+http://sites.google.com/a/unimrcp.org/testsite/files/EA2.png?attredirects=0
+
+_Configuration_:
+
+_Sample Network Captures_: TTS ASR
+<br>
+<br>
+
+=== Deployment 2 ===
+Setup: UniMRCP client allows to connect to MRCPv2 server. Both are on the same LAN.
+<br>
+<br>
+http://sites.google.com/a/unimrcp.org/testsite/files/EA2.png?attredirects=0
+
+Configuration:
+
+Sample Network Captures: TTS ASR
+<br>
+<br>
