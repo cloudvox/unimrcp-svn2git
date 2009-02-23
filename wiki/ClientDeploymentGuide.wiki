@@ -13,11 +13,11 @@ This guide describes how to deploy UniMRCP client by providing typical setups, a
 _Setup_: UniMRCP client allows to connect to MRCPv1 server. Both are on the same LAN.
 <br>
 <br>
-http://sites.google.com/a/unimrcp.org/unimrcp/clientdeploymentdata/ea.png?attredirects=0
+http://sites.google.com/a/unimrcp.org/unimrcp/clientdeploymentdata/ea1.png?attredirects=0
 
-_Configuration_: [http://sites.google.com/a/unimrcp.org/unimrcp/clientdeploymentdata/unimrcpclient.xml?attredirects=0 unimrcpclient.xml]
+_Configuration_: [http://sites.google.com/a/unimrcp.org/unimrcp/clientdeploymentdata/unimrcpclient1.xml?attredirects=0 unimrcpclient.xml]
 
-_Sample Network Captures_: [http://sites.google.com/a/unimrcp.org/unimrcp/clientdeploymentdata/mrcp-tts.pcap?attredirects=0 mrcp-tts.pcap] [http://sites.google.com/a/unimrcp.org/unimrcp/clientdeploymentdata/mrcp-asr.pcap?attredirects=0 mrcp-asr.pcap]
+_Sample Network Captures_: [http://sites.google.com/a/unimrcp.org/unimrcp/clientdeploymentdata/mrcp-tts1.pcap?attredirects=0 mrcp-tts.pcap] [http://sites.google.com/a/unimrcp.org/unimrcp/clientdeploymentdata/mrcp-asr1.pcap?attredirects=0 mrcp-asr.pcap]
 <br>
 <br>
 
@@ -25,10 +25,10 @@ _Sample Network Captures_: [http://sites.google.com/a/unimrcp.org/unimrcp/client
 Setup: UniMRCP client allows to connect to MRCPv2 server. Both are on the same LAN.
 <br>
 <br>
-http://sites.google.com/a/unimrcp.org/testsite/files/EA2.png?attredirects=0
+http://sites.google.com/a/unimrcp.org/unimrcp/clientdeploymentdata/ea2.png?attredirects=0
 
-Configuration:
+_Configuration_: [http://sites.google.com/a/unimrcp.org/unimrcp/clientdeploymentdata/unimrcpclient2.xml?attredirects=0 unimrcpclient.xml]
 
-Sample Network Captures: TTS ASR
+_Sample Network Captures_: [http://sites.google.com/a/unimrcp.org/unimrcp/clientdeploymentdata/mrcp-tts2.pcap?attredirects=0 mrcp-tts.pcap] [http://sites.google.com/a/unimrcp.org/unimrcp/clientdeploymentdata/mrcp-asr2.pcap?attredirects=0 mrcp-asr.pcap]
 <br>
 <br>
