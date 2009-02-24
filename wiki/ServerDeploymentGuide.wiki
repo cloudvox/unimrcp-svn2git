@@ -1,4 +1,5 @@
 #summary How to deploy UniMRCP server.
+#labels Featured-9
 
 <wiki:toc max_depth="3"/>
 <br>
