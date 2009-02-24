@@ -1,0 +1,60 @@
+#summary How to deploy UniMRCP server.
+
+<wiki:toc max_depth="3"/>
+<br>
+<br>
+==1. Overview ==
+This guide describes how to deploy UniMRCP server by providing typical setups, appropriate configurations and sample network captures.
+
+<br>
+==2. Deployments ==
+=== Deployment 1 ===
+_Setup_: UniMRCP server interoperates with MRCPv1 client. Both are on the same LAN.
+<br>
+<br>
+http://sites.google.com/a/unimrcp.org/unimrcp/serverdeploymentdata/ea1.png?attredirects=0
+
+_Configuration_: 
+_Sample Network Captures_: 
+<br>
+<br>
+
+=== Deployment 2 ===
+Setup: UniMRCP server interoperates with MRCPv2 client. Both are on the same LAN.
+<br>
+<br>
+http://sites.google.com/a/unimrcp.org/unimrcp/serverdeploymentdata/ea2.png?attredirects=0
+
+_Configuration_: 
+_Sample Network Captures_: 
+<br>
+<br>
+
+=== Deployment 3 ===
+Setup: UniMRCP server interoperates with MRCPv1 client. UniMRCP server is behind NAT.
+<br>
+<br>
+http://sites.google.com/a/unimrcp.org/unimrcp/serverdeploymentdata/ea3.png?attredirects=0
+
+_Configuration_: 
+
+<br>
+<br>
+
+=== Deployment 4 ===
+Setup: UniMRCP server interoperates with MRCPv2 client. UniMRCP server is behind NAT.
+<br>
+<br>
+http://sites.google.com/a/unimrcp.org/unimrcp/serverdeploymentdata/ea4.png?attredirects=0
+
+_Configuration_: 
+<br>
+<br>
+
+=== Deployment 5 ===
+Setup: UniMRCP server interoperates with multiple MRCPv1 and MRCPv2 clients.
+<br>
+<br>
+http://sites.google.com/a/unimrcp.org/unimrcp/serverdeploymentdata/ea5.png?attredirects=0
+
+_Configuration_: 
