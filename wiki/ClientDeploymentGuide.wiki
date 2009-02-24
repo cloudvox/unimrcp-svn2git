@@ -61,7 +61,4 @@ Setup: UniMRCP client allows to connect to multiple MRCPv1 and MRCPv2 servers.
 <br>
 http://sites.google.com/a/unimrcp.org/unimrcp/clientdeploymentdata/ea5.png?attredirects=0
 
-_Configuration_:
-
-<br>
-<br>
+_Configuration_: [http://sites.google.com/a/unimrcp.org/unimrcp/clientdeploymentdata/unimrcpclient5.xml?attredirects=0 unimrcpclient.xml]
