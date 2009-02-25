@@ -15,8 +15,9 @@ _Setup_: UniMRCP server interoperates with MRCPv1 client. Both are on the same L
 <br>
 http://sites.google.com/a/unimrcp.org/unimrcp/serverdeploymentdata/ea1.png?attredirects=0
 
-_Configuration_: 
-_Sample Network Captures_: 
+_Configuration_: [http://sites.google.com/a/unimrcp.org/unimrcp/serverdeploymentdata/unimrcpserver1.xml?attredirects=0 unimrcpserver.xml]
+
+_Sample Network Captures_: [http://sites.google.com/a/unimrcp.org/unimrcp/serverdeploymentdata/mrcp-tts1.pcap?attredirects=0 mrcp-tts.pcap] [http://sites.google.com/a/unimrcp.org/unimrcp/serverdeploymentdata/mrcp-asr1.pcap?attredirects=0 mrcp-asr.pcap]
 <br>
 <br>
 
@@ -26,8 +27,9 @@ Setup: UniMRCP server interoperates with MRCPv2 client. Both are on the same LAN
 <br>
 http://sites.google.com/a/unimrcp.org/unimrcp/serverdeploymentdata/ea2.png?attredirects=0
 
-_Configuration_: 
-_Sample Network Captures_: 
+_Configuration_: [http://sites.google.com/a/unimrcp.org/unimrcp/serverdeploymentdata/unimrcpserver2.xml?attredirects=0 unimrcpserver.xml]
+
+_Sample Network Captures_: [http://sites.google.com/a/unimrcp.org/unimrcp/serverdeploymentdata/mrcp-tts2.pcap?attredirects=0 mrcp-tts.pcap] [http://sites.google.com/a/unimrcp.org/unimrcp/serverdeploymentdata/mrcp-asr2.pcap?attredirects=0 mrcp-asr.pcap]
 <br>
 <br>
 
