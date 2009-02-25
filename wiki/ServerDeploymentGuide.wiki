@@ -39,7 +39,7 @@ Setup: UniMRCP server interoperates with MRCPv1 client. UniMRCP server is behind
 <br>
 http://sites.google.com/a/unimrcp.org/unimrcp/serverdeploymentdata/ea3.png?attredirects=0
 
-_Configuration_: 
+_Configuration_: [http://sites.google.com/a/unimrcp.org/unimrcp/serverdeploymentdata/unimrcpserver3.xml?attredirects=0 unimrcpserver.xml]
 
 <br>
 <br>
@@ -50,7 +50,7 @@ Setup: UniMRCP server interoperates with MRCPv2 client. UniMRCP server is behind
 <br>
 http://sites.google.com/a/unimrcp.org/unimrcp/serverdeploymentdata/ea4.png?attredirects=0
 
-_Configuration_: 
+_Configuration_: [http://sites.google.com/a/unimrcp.org/unimrcp/serverdeploymentdata/unimrcpserver4.xml?attredirects=0 unimrcpserver.xml]
 <br>
 <br>
 
@@ -60,4 +60,4 @@ Setup: UniMRCP server interoperates with multiple MRCPv1 and MRCPv2 clients.
 <br>
 http://sites.google.com/a/unimrcp.org/unimrcp/serverdeploymentdata/ea5.png?attredirects=0
 
-_Configuration_: 
+_Configuration_: [http://sites.google.com/a/unimrcp.org/unimrcp/serverdeploymentdata/unimrcpserver5.xml?attredirects=0 unimrcpserver.xml]
