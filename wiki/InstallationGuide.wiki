@@ -1,5 +1,5 @@
 #summary How to install UniMRCP project.
-#labels Featured,Id-1
+#labels Featured,Id-1,Phase-Deploy
 
 <wiki:toc max_depth="3" />
 
