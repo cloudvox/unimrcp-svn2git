@@ -1,5 +1,5 @@
 #summary How to configure UniMRCP client and server.
-#labels Featured,Id-2
+#labels Featured,Id-2,Phase-Deploy
 
 <wiki:toc max_depth="3"/>
 
