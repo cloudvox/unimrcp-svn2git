@@ -22,6 +22,9 @@ which must be installed prior to UniMRCP build.
 
   * Sofia-SIP [>=1.12.6] (http://sofia-sip.sourceforge.net/). Sofia-SIP library is used to implement MRCPv2 specification compliant SIP signaling. Sofia-SIP is an open-source SIP User-Agent library, compliant with the IETF RFC3261 specification.
 
+Use the link below to download one of known to work and ready to use packages of APR and Sofia-SIP libraries
+    http://www.unimrcp.org/dependencies
+
 ===GNU Build (Linux and other Unix variants)===
 ====Additional requirements====
   * autoconf 2.57 or newer
