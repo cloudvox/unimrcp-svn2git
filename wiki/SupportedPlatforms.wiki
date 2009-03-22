@@ -12,12 +12,7 @@ Below is the list of platforms UniMRCP supports and has being actively developed
     * RHEL 5, RHEL 4.6
 
 
+<br>
+<br>
 UniMRCP should run on platforms [http://apr.apache.org/ APR] (Apache Portable Runtime) supports. Typically those platforms are Windows and Unix variants.
-
-
-
-<br>
-<br>
-<br>
-<br>
 Please add a comment below, if you use or at least compile UniMRCP on platforms not listed above.
