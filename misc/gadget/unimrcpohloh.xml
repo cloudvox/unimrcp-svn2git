@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="UniMRCP Donate" height="250" scaling="false" />
+  <Content type="html">
+  <![CDATA[ 
+  <script type="text/javascript"   src="http://www.ohloh.net/p/24826/widgets/project_thin_badge.js"></script>  ]]> 
+  </Content>
+</Module>

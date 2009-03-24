@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="UniMRCP Discussions" height="250" scaling="false" />
+  <Content type="html">
+  <![CDATA[ 
+<script src="http://www.gmodules.com/ig/ifr?url=http://customrss.googlepages.com/customrss.xml&amp;up_rssurl=http%3A%2F%2Fgroups.google.com%2Fgroup%2Funimrcp%2Ffeed%2Frss_v2_0_topics.xml&amp;up_title=CustomRSS&amp;up_titleurl=http%3A%2F%2Fgroups.google.com%2Fgroup%2Funimrcp%2Ftopics%3Fhl%3Den&amp;up_num_entries=15&amp;up_linkaction=openlink&amp;up_background=FFFFFF&amp;up_border=CFC58E&amp;up_round=1&amp;up_fontfamily=Arial&amp;up_fontsize=8pt&amp;up_openfontsize=9pt&amp;up_itempadding=3px&amp;up_bullet=bull&amp;up_custicon=Overrides%20favicon.ico&amp;up_boxicon=1&amp;up_opacity=20&amp;up_itemlinkcolor=596F8E&amp;up_itemlinkweight=Normal&amp;up_itemlinkdecoration=None&amp;up_vlinkcolor=C7CFA8&amp;up_vlinkweight=Normal&amp;up_vlinkdecoration=None&amp;up_showdate=1&amp;up_datecolor=9F9F9F&amp;up_tcolor=1C57A9&amp;up_thighlight=FFF19D&amp;up_desclinkcolor=1B5790&amp;up_color=000000&amp;up_dback=FFFFFF&amp;up_dborder=DFCE6F&amp;up_desclinkweight=Bold&amp;up_desclinkdecoration=None&amp;synd=open&amp;w=330&amp;h=240&amp;title=Recent+Discussion+Topics&amp;border=http%3A%2F%2Fwww.gmodules.com%2Fig%2Fimages%2F&amp;output=js"></script>  
+  ]]> 
+  </Content>
+</Module>
