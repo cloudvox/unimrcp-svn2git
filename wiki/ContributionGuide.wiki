@@ -18,5 +18,4 @@ If you want UniMRCP to run on some commercial software or hardware platform, con
 === Donate money ===
 UniMRCP is an open source project licensed under [http://www.apache.org/licenses/LICENSE-2.0 Apache 2.0]. It is freely available from [http://code.google.com/p/unimrcp/downloads/list download] area. There is nothing you must pay for, more over you can build commercial solutions based on it. However if you benefit from the project or want to boost up the development, please don't forget to donate to UniMRCP.
 <br>
-
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=325429" imageanchor="1" rel="nofollow" target="_blank"><img src="https://www.paypal.com/en_GB/i/btn/btn_donate_SM.gif" border="0">
+<wiki:gadget url="http://unimrcp.googlecode.com/svn/misc/gadget/unimrcpdonate-large.xml" border="0"/>
