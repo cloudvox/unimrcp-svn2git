@@ -1,0 +1,22 @@
+#summary How to contribute to UniMRCP project.
+#labels Phase-Support,Id-12
+
+=== Contribute time ===
+If you have programming skills and good background in one of MRCP related areas, you can help further evolve the software. Checkout the [http://code.google.com/p/unimrcp/source/checkout source], read the [http://unimrcp.webhosting-for-free.com/ea/index.htm documentation], join the [http://groups.google.com/group/UniMRCP discussion group], look through the [http://code.google.com/p/unimrcp/issues/list issues].
+<br>
+If you have no programming skills, you can still help improve the documentation, add comments on the [http://code.google.com/p/unimrcp/w/list wiki] pages, make tests and raise new [http://code.google.com/p/unimrcp/issues/list issues].
+<br>
+Your input to the project is valuable and welcome.
+<br>
+<br>
+=== Contribute software or hardware ===
+There are a lot of free and commercial tools, which help develop software. While free tools such as [http://valgrind.org/ Valgrind] (memory profiler), [http://sipp.sourceforge.net/ SipP] (SIP call generator) have been actively used during the development, you can help by contributing commercial tools to the project such as Enterprise Architect [http://www.sparxsystems.com.au/].
+<br>
+If you want UniMRCP to run on some commercial software or hardware platform, contribute that platform to the project.
+<br>
+<br>
+=== Donate money ===
+UniMRCP is an open source project licensed under [http://www.apache.org/licenses/LICENSE-2.0 Apache 2.0]. It is freely available from [http://code.google.com/p/unimrcp/downloads/list download] area. There is nothing you must pay for, more over you can build commercial solutions based on it. However if you benefit from the project or want to boost up the development, please don't forget to donate to UniMRCP.
+<br>
+
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=325429" imageanchor="1" rel="nofollow" target="_blank"><img src="https://www.paypal.com/en_GB/i/btn/btn_donate_SM.gif" border="0">
