@@ -4,22 +4,31 @@
 <wiki:toc max_depth="4"/>
 ====  What is UniMRCP? ====
 UniMRCP is an open source cross-platform implementation of Media Resource Control Protocol (MRCP).
+
 ====  What version of MRCP does project support? ====
 UniMRCP supports both MRCPv1 and MRCPv2.
+
 ====  What platforms (operating systems) does UniMRCP run on? ====
 UniMRCP has been actively developed and tested on Windows (XP, Vista) and Linux distributions (Fedora, CentOS).
-Overall project should run on platforms APR supports (Unix variants, Windows, Mac OSX, OS/2, Netware).
+See [SupportedPlatforms Supported Platforms] for more info.
+
 ====  What license is UniMRCP released under? Can I use UniMRCP in closed source, commercial projects? ====
 UniMRCP is released under Apache 2.0 license. Open as well as closed source, commercial UniMRCP based solutions may exist.
-====  I'm very new to UniMRCP. Where should I start? ====
-Read [InstallationGuide Installation Guide] first.
-====  I'm looking for MRCP client to integrate into my application. What should I use? ====
-In brief, you should use libunimrclient library. Also check demo unimrcpclient application, which is based on libunimrcpclient library. Read [ClientIntegrationGuide Client Integration Guide] for the detailed instructions.
-====  I'm looking for MRCP server for my ASR/TTS engine. What should I do? ====
-In brief, you should write another plugin for unimrcpserver using your ASR/TTS engine. There are number of plugins available in the source tree. Read [PluginImplementationGuide Plugin Implementation Guide] for the detailed instructions.
-====  I've got some ideas around the project. Where can I discuss them? ====
-Use [http://groups.google.com/group/unimrcp Discussion Group] for anything concerning UniMRCP.
-====  I've got some issues using the project. What should I do? ====
-Feel free to generate issues using [http://code.google.com/p/unimrcp/issues/ Issue Tracker].
 
-==== More questions to come. ====
+====  I'm very new to UniMRCP. Where should I start? ====
+Read the [InstallationGuide Installation Guide] first.
+
+====  I'm looking for MRCP client to integrate into my application. What should I use? ====
+In brief, you should use libunimrclient library. Also check demo unimrcpclient application, which is based on libunimrcpclient library. Read the [ClientIntegrationGuide Client Integration Guide] for the detailed instructions.
+
+====  I'm looking for MRCP server for my ASR/TTS engine. What should I do? ====
+In brief, you should write another plugin for unimrcpserver using your ASR/TTS engine. There are number of plugins available in the source tree. Read the [PluginImplementationGuide Plugin Implementation Guide] for the detailed instructions.
+
+====  I've got some ideas around the project. Where can I discuss them? ====
+Use the [http://groups.google.com/group/unimrcp Discussion Group] for anything UniMRCP related.
+
+====  I've got some issues using the project. What should I do? ====
+Feel free to generate issues using the [http://code.google.com/p/unimrcp/issues/ Issue Tracker].
+
+====  How can I contribute to the project? ====
+Read the [ContributionGuide Contribution Guide].
