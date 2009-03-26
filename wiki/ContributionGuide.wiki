@@ -1,5 +1,5 @@
 #summary How to contribute to UniMRCP project.
-#labels Phase-Support,Id-12,Featured
+#labels Phase-Support,Id-20,Featured
 
 === Contribute time ===
 If you have programming skills and good background in one of MRCP related areas, you can help further evolve the software. Checkout the [http://code.google.com/p/unimrcp/source/checkout source], read the [http://unimrcp.webhosting-for-free.com/ea/index.htm documentation], join the [http://groups.google.com/group/UniMRCP discussion group], look through the [http://code.google.com/p/unimrcp/issues/list issues].

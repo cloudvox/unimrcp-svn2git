@@ -1,5 +1,5 @@
 #summary How to deploy UniMRCP server.
-#labels Id-9,Phase-Deploy
+#labels Id-05,Phase-Deploy
 ==1. Overview ==
 This guide describes how to deploy UniMRCP server by providing typical setups, appropriate configurations and sample network captures.
 

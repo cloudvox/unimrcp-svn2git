@@ -1,5 +1,5 @@
 #summary Frequently asked questions about UniMRCP project.
-#labels Id-7,Featured
+#labels Phase-Support,Id-21,Featured
 
 <wiki:toc max_depth="4"/>
 ====  What is UniMRCP? ====

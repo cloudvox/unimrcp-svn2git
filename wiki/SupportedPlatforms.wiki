@@ -1,5 +1,5 @@
 #summary Platforms (operating systems) UniMRCP runs on.
-#labels Id-10,Phase-Deploy
+#labels Id-06,Phase-Deploy
 
 Below is the list of platforms UniMRCP supports and has being actively developed on.
 

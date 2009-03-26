@@ -1,5 +1,5 @@
 #summary How to deploy UniMRCP client.
-#labels Id-8,Phase-Deploy
+#labels Id-04,Phase-Deploy
 ==1. Overview ==
 This guide describes how to deploy UniMRCP client by providing typical setups, appropriate configurations and sample network captures.
 
