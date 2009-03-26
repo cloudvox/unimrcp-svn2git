@@ -3,7 +3,7 @@
 ==1. Overview ==
 This guide describes how to deploy UniMRCP client and LumenVox server. It provides typical configurations of UniMRCP client and LumenVox server and sample network captures.
 <br>
-LumenVox is an automatic speech recognition (ASR) vendor. LumenVox server supports both MRCPv1 and MRCPv2 and is available for various platforms:
+LumenVox is an Automatic Speech Recognition (ASR) vendor. LumenVox server supports both MRCPv1 and MRCPv2 and is available for various platforms:
   * Fedora 5 - 8
   * Red Hat Enterprise Linux 4, 5
   * CentOS 4, 5 (through Red Hat builds)
@@ -14,7 +14,6 @@ Please refer to http://www.lumenvox.com for further information on how to
 obtain and install LumenVox MRCP server. 
 
 <br>
-<br>
 ==2. Deployment ==
 ====Topology====
 UniMRCP client allows to connect to LumenVox server. Both are on the same LAN.
@@ -24,9 +23,9 @@ UniMRCP client allows to connect to LumenVox server. Both are on the same LAN.
 http://sites.google.com/a/unimrcp.org/unimrcp/lumenvoxinteropdata/ea.png?attredirects=0 
 
 ====Configuration====
-_UniMRCP_:  [http://sites.google.com/a/unimrcp.org/unimrcp/lumenvoxinteropdata/unimrcpclient.xml?attredirects=0 unimrcpclient.xml]
+_UniMRCP Client 0.5.0_:  [http://sites.google.com/a/unimrcp.org/unimrcp/lumenvoxinteropdata/unimrcpclient.xml?attredirects=0 unimrcpclient.xml]
 <br>
-_LumenVox_: [http://sites.google.com/a/unimrcp.org/unimrcp/lumenvoxinteropdata/LvMediaServer.config?attredirects=0 LvMediaServer.config]
+_LumenVox Engine 8.7.300_: [http://sites.google.com/a/unimrcp.org/unimrcp/lumenvoxinteropdata/LvMediaServer.config?attredirects=0 LvMediaServer.config]
 
 <br>
 ====Basic Recognition Scenario====
@@ -42,5 +41,6 @@ S->C: Recognition-Complete
 
 <br>
 ====Sample Network Captures==== 
-[http://sites.google.com/a/unimrcp.org/unimrcp/lumenvoxinteropdata/unilum-basic-v1.pcap?attredirects=0 MRCPv1.pcap] [http://sites.google.com/a/unimrcp.org/unimrcp/lumenvoxinteropdata/unilum-basic-v2.pcap?attredirects=0 MRCPv2.pcap]
+[http://sites.google.com/a/unimrcp.org/unimrcp/lumenvoxinteropdata/unilum-basic-v1.pcap?attredirects=0 MRCPv1], [http://sites.google.com/a/unimrcp.org/unimrcp/lumenvoxinteropdata/unilum-basic-v2.pcap?attredirects=0 MRCPv2]
+<br>
 <br>
