@@ -1,0 +1,38 @@
+#summary How to deploy UniMRCP client and LumenVox MRCPv1 or MRCPv2 server.
+
+#labels Id-31,Phase-Deploy
+==1. Overview ==
+This guide describes how to deploy UniMRCP client and LumenVox MRCPv1 or MRCPv2 server. It provides typical configurations of UniMRCP client and LumenVox server, and sample network captures.
+<br>
+<br>
+
+==2. Deployment ==
+====Topology====
+UniMRCP client allows to connect to LumenVox server. Both are on the same LAN.
+<br>
+<br>
+
+http://sites.google.com/a/unimrcp.org/unimrcp/lumenvoxinteropdata/ea.png?attredirects=0 
+
+====Configuration====
+  *_UniMRCP_: [http://sites.google.com/a/unimrcp.org/unimrcp/lumenvoxinteropdata/unimrcpclient.xml?attredirects=0 unimrcpclient.xml]
+
+  *_LumenVox_: [http://sites.google.com/a/unimrcp.org/unimrcp/lumenvoxinteropdata/LvMediaServer.config?attredirects=0 LvMediaServer.config]
+
+<br>
+====Basic Recognition Scenario====
+C->S: Define-Grammar
+<br>
+S->C: Complete
+<br>
+C->S: Recognize
+<br>
+S->C: In-Progress
+<br>
+S->C: Recognition-Complete
+
+<br>
+====Sample Network Captures==== 
+  *[http://sites.google.com/a/unimrcp.org/unimrcp/lumenvoxinteropdata/unilum-basic-v1.pcap?attredirects=0 mrcpv1.pcap] 
+  *[http://sites.google.com/a/unimrcp.org/unimrcp/lumenvoxinteropdata/unilum-basic-v2.pcap?attredirects=0 mrcpv2.pcap]
+<br>
