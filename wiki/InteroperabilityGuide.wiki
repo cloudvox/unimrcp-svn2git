@@ -1,0 +1,25 @@
+#summary Interoperability Guide.
+#labels Phase-Deploy,Id-30
+
+<wiki:toc max_depth="4" />
+----
+=== UniMRCP Server ===
+
+==== Voxpilot ====
+  * Protocol: MRCPv1
+  * Resource: Speech Synthesizer (Cepstral TTS)
+
+==== Aculab ====
+  * Protocol: MRCPv1
+  * Resource: Speech Synthesizer (Cepstral TTS)
+
+----
+=== UniMRCP Client ===
+
+==== Lumenvox ====
+  * Protocol: MRCPv1, MRCPv2
+  * Resource: Speech Recognizer
+
+==== IBM Web Sphere ====
+  * Protocol: MRCPv1
+  * Resource: Speech Recognizer
