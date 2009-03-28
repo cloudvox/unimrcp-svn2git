@@ -1,4 +1,5 @@
 #summary How to deploy UniMRCP client and LumenVox MRCPv1 or MRCPv2 server.
+#labels Phase-Deploy,Id-31
 
 ==1. Overview ==
 This guide describes how to deploy UniMRCP client and LumenVox server. It provides typical configurations of UniMRCP client and LumenVox server and sample network captures.
