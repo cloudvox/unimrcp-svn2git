@@ -2,6 +2,8 @@
 #labels Phase-Deploy,Id-30
 
 <wiki:toc max_depth="4" />
+=== Overview ===
+This guide is intended to provide information regarding UniMRCP interoperability. UniMRCP slogan is compliance with the MRCP specifications first. Therefore UniMRCP client and server should work with any MRCPv1 and MRCPv2 compliant implementations. Below is the list of MRCP vendors/products UniMRCP client and server are known to work with. The interoperability has been tested internally either on UniMRCP or vendor side.
 ----
 === UniMRCP Server ===
 
@@ -23,3 +25,9 @@
 ==== IBM Web Sphere ====
   * Protocol: MRCPv1
   * Resource: Speech Recognizer
+
+
+<br>
+<br>
+----
+Please leave comments below mentioning the product, MRCP version, resources, you are using UniMRCP client or server with.
