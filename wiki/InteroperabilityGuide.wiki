@@ -1,33 +1,36 @@
 #summary Interoperability Guide.
 #labels Phase-Deploy,Id-30
 
-<wiki:toc max_depth="4" />
-=== Overview ===
-This guide is intended to provide information regarding UniMRCP interoperability. UniMRCP slogan is compliance with the MRCP specifications first. Therefore UniMRCP client and server should work with any MRCPv1 and MRCPv2 compliant implementations. Below is the list of MRCP vendors/products UniMRCP client and server are known to work with. The interoperability has been tested internally either on UniMRCP or vendor side.
-----
-=== UniMRCP Server ===
+==== Overview ====
+This guide provides information regarding UniMRCP interoperability. UniMRCP slogan is compliance with the MRCP specifications. Therefore UniMRCP client and server should work with every MRCPv1 and MRCPv2 compliant implementation. While below is the list of MRCP vendors/products UniMRCP client and server are known to work with. The interoperability has been tested internally either on UniMRCP or vendor side.
 
-==== Voxpilot ====
-  * Protocol: MRCPv1
-  * Resource: Speech Synthesizer (Cepstral TTS)
+<br>
+==== UniMRCP Server (Cepstral TTS) ====
 
-==== Aculab ====
-  * Protocol: MRCPv1
-  * Resource: Speech Synthesizer (Cepstral TTS)
+|| *Vendor* || *MRCPv1* || *MRCPv2* ||
+|| Voxpilot || Completed || N/A ||
+|| Aculab || Completed || In-Progress ||
 
-----
-=== UniMRCP Client ===
 
-==== Lumenvox ====
-  * Protocol: MRCPv1, MRCPv2
-  * Resource: Speech Recognizer
+<br>
+==== UniMRCP Client (TTS) ====
 
-==== IBM Web Sphere ====
-  * Protocol: MRCPv1
-  * Resource: Speech Recognizer
+|| *Vendor* || *MRCPv1* || *MRCPv2* ||
+|| Nuance || Completed || Completed ||
+|| IBM WVS || Completed || N/A ||
+
+<br>
+==== UniMRCP Client (ASR) ====
+
+|| *Vendor* || *MRCPv1* || *MRCPv2* ||
+|| [LumenVoxInterop Lumenvox] || Completed || Completed ||
+|| IBM WVS || Completed || N/A ||
 
 
 <br>
 <br>
-----
-Please leave comments below mentioning the product, MRCP version, resources, you are using UniMRCP client or server with.
+If you use UniMRCP client or server with MRCP vendors/products not mentioned above, please leave your comments below by providing the following information
+  * Vendor:
+  * Protocol: MRCPv1 and/or MRCPv2
+  * Resource: ASR and/or TTS
+If you experience interoperability issues, please report them using the [http://code.google.com/p/unimrcp/issues/list issue tracker].
