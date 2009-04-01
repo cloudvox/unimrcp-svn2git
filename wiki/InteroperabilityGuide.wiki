@@ -1,4 +1,4 @@
-#summary Interoperability Guide.
+#summary MRCP vendors/products UniMRCP client and server are known to work with.
 #labels Phase-Deploy,Id-30
 
 ==== Overview ====
@@ -9,7 +9,8 @@ This guide provides information regarding UniMRCP interoperability. UniMRCP slog
 
 || *Vendor* || *MRCPv1* || *MRCPv2* ||
 || Voxpilot || Completed || N/A ||
-|| Aculab || Completed || In-Progress ||
+|| Aculab || Completed || N/A ||
+|| Holly-Connects || Completed || N/A ||
 
 
 <br>
@@ -29,8 +30,8 @@ This guide provides information regarding UniMRCP interoperability. UniMRCP slog
 
 <br>
 <br>
-If you use UniMRCP client or server with MRCP vendors/products not mentioned above, please leave your comments below by providing the following information
+If you used or at least basically tested UniMRCP client or server with MRCP vendors/products not mentioned above, please leave a comment below by providing the following information
   * Vendor:
   * Protocol: MRCPv1 and/or MRCPv2
   * Resource: ASR and/or TTS
-If you experience interoperability issues, please report them using the [http://code.google.com/p/unimrcp/issues/list issue tracker].
+If you experienced interoperability issues, please report them using the [http://code.google.com/p/unimrcp/issues/list issue tracker].
