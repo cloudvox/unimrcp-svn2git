@@ -1,4 +1,5 @@
 #summary UniMRCP integrated solutions.
+#labels Phase-Deploy,Id-40
 
 == UniMRCP server ==
   * [www.unimrcp.org/cepstral Cepstral MRCP server]. Cepstral's TTS engine is integrated into UniMRCP server as a plugin.
