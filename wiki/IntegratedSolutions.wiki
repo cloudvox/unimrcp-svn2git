@@ -1,0 +1,15 @@
+#summary UniMRCP integrated solutions.
+
+== UniMRCP server ==
+  * [www.unimrcp.org/cepstral Cepstral MRCP server]. Cepstral's TTS engine is integrated into UniMRCP server as a plugin.
+  * Looking for more solutions
+
+<br>
+<br>
+=== UniMRCP client ===
+  * [www.freeswitch.org FreeSWITCH] is an open source telephony platform. It provides ASR/TTS interface for the implementation and integration of custom ASR/TTS modules. Module which uses UniMRCP client (mod_unimrcp) to connect FreeSWITCH to MRCP compliant servers is still under the way. Please help with funding finally make this module happen.
+  * Looking for more solutions
+
+<br>
+<br>
+Please leave a comment below describing solution you have built or are building using UniMRCP.
