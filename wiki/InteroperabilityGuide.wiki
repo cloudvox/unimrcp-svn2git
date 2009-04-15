@@ -2,7 +2,9 @@
 #labels Phase-Deploy,Id-30
 
 ==== Overview ====
-This guide provides information regarding UniMRCP interoperability. UniMRCP slogan is compliance with the MRCP specifications. Therefore UniMRCP client and server should work with every MRCPv1 and MRCPv2 compliant implementation. While below is the list of MRCP vendors/products UniMRCP client and server are known to work with. The interoperability has been tested internally either on UniMRCP or vendor side.
+This guide provides information regarding UniMRCP interoperability. UniMRCP slogan is compliance with the MRCP specifications. Therefore UniMRCP client and server should work with every MRCPv1 and MRCPv2 compliant implementations. 
+<br>
+Below is the list of MRCP vendors/products UniMRCP client and server are known to work with. The interoperability has been tested internally either on UniMRCP or vendor side.
 
 <br>
 ==== UniMRCP Server (Cepstral TTS) ====
