@@ -1,0 +1,28 @@
+#summary How to integrate PocketSphinx ASR into UniMRCP server.
+#labels Id-41,Phase-Deploy
+
+<wiki:toc max_depth="2" />
+
+=1. Overview =
+This guide describes how to use PocketSphinx ASR with UniMRCP server. It assumes you are already familiar with [InstallationGuide installation] and [ConfigurationGuide configuration] tips of UniMRCP server.
+UniMRCP server provides plugin interface to integrate 3-rd party TTS and ASR engines.
+
+=2. Requirements =
+UniMRCP r1030 and above
+SphinxBase library (http://www.unimrcp.org/dependencies/sphinxbase-0.4.99-latest.tar.gz)
+PocketSphinx library (http://www.unimrcp.org/dependencies/pocketsphinx-0.5.99-latest.tar.gz)
+PocketSphinx model (http://www.unimrcp.org/dependencies/communicator_semi_6000_20080321.tar.gz)
+
+=3. Build =
+==GNU Build (Linux and other Unix variants)==
+===Configure option===
+
+==VS2005 Build (Windows XP, Vista, ...)==
+
+=4. Configuration =
+Specify mrcpcepstral as a plugin in unimrcpserver.xml as follows:
+{{{
+    <plugin>
+      <engine name="PocketSphinx-1" class="mrcppocketsphinx" enable="1"/>
+    </plugin>
+}}}
