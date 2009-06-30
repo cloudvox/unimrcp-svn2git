@@ -3,26 +3,84 @@
 
 <wiki:toc max_depth="2" />
 
+<br>
 =1. Overview =
 This guide describes how to use PocketSphinx ASR with UniMRCP server. It assumes you are already familiar with [InstallationGuide installation] and [ConfigurationGuide configuration] tips of UniMRCP server.
-UniMRCP server provides plugin interface to integrate 3-rd party TTS and ASR engines.
 
+<br>
 =2. Requirements =
-UniMRCP r1030 and above
-SphinxBase library (http://www.unimrcp.org/dependencies/sphinxbase-0.4.99-latest.tar.gz)
-PocketSphinx library (http://www.unimrcp.org/dependencies/pocketsphinx-0.5.99-latest.tar.gz)
-PocketSphinx model (http://www.unimrcp.org/dependencies/communicator_semi_6000_20080321.tar.gz)
+  * UniMRCP r1030 and above
+  * SphinxBase library (http://www.unimrcp.org/dependencies/sphinxbase-0.4.99-latest.tar.gz)
+  * PocketSphinx library (http://www.unimrcp.org/dependencies/pocketsphinx-0.5.99-latest.tar.gz)
+  * PocketSphinx model (http://www.unimrcp.org/dependencies/communicator_semi_6000_20080321.tar.gz)
+<br>
+Note: The libraries and model are borrowed from FreeSWITCH (http://svn.freeswitch.org/downloads/libs/). FreeSWITCH's users can reuse what they have already installed with FreeSWITCH.
 
+<br>
 =3. Build =
 ==GNU Build (Linux and other Unix variants)==
-===Configure option===
+  # Download SphinxBase and PocketSphinx libraries, unpack and build them. It's not required to install these libraries.
+{{{
+./configure
+make
+}}}
 
+
+  # Configure UniMRCP as follows
+{{{
+./configure --enable-pocketsphinx-plugin --with-pocketsphinx=path-to-pocketsphinx --with-sphinxbase=path-to-sphinxbase
+make
+make install
+}}}
+  # Download PocketSphinx model (communicator), unpack it to InstallDir/data next to wsj1 model and default.dic, which should be already there.
+
+<br>
 ==VS2005 Build (Windows XP, Vista, ...)==
+  # Download SphinxBase and PocketSphinx libraries, unpack them into unimrcp\libs directory as follows
+    * sphinxbase
+    * pocketsphinx
+  # Open sphinxbase.sln file and build the solution.
+  # Open pocketsphinx.sln file and build the solution.
+  # Open unimrcp.sln file, include mrcppocketsphinx project into build (Build -> Configuration Manager).
+  # Build the solution.
+  # Build utility projects to copy all the required data to output directory (prepare and/or preparesphinx in Solution Explorer -> tools).
+  # Download PocketSphinx model (communicator), unpack it to OutputDir\data next to wsj1 model and default.dic, which should be already there.
 
+
+<br>
 =4. Configuration =
-Specify mrcpcepstral as a plugin in unimrcpserver.xml as follows:
+Specify mrcppocketsphinx as a plugin in unimrcpserver.xml as follows:
 {{{
     <plugin>
       <engine name="PocketSphinx-1" class="mrcppocketsphinx" enable="1"/>
     </plugin>
+}}}
+There can be multiple plugins of the same resource and it's possible to configure profile based plugins. However for the beginning you may want to enable only PocketSphinx ASR plugin and disable other ASR plugins.
+<br>
+PocketSphinx recognition related properties can be configured via pocketsphinx.xml
+{{{
+<!-- PocketSphinx Document -->
+<pocketsphinx>
+  <!-- Senstitivity level and timeout are used for voice activity (speech) detection 
+       reasonable values: level is in [2..250] range, timeout is in [100..500] msec range
+  -->
+  <sensitivity level="50" timeout="300"/>
+
+  <!-- Default values for noinput and recognition timeout,
+       these values can be overriden by client's requests
+  -->
+  <timers noinput-timeout="10000" recognition-timeout="15000"/>
+
+
+  <!-- PocketSphinx related model and dictionary data.
+       Default dir (dir="") is InstallDir/data
+  -->
+  <model dir="" narrowband="communicator" wideband="wsj1" dictionary="default.dic" preferred="narrowband"/>
+  <!-- <model dir="/usr/local/freeswitch/grammar" narrowband="model/communicator" wideband="model/wsj1" dictionary="default.dic"/> -->
+
+  <!-- Enable to save utterance.
+       Default dir (dir="") is InstallDir/data
+  -->
+  <save-waveform dir="" enable="0"/>
+</pocketsphinx>
 }}}
