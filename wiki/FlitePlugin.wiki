@@ -1,0 +1,50 @@
+#summary How to integrate Flite TTS into UniMRCP server.
+#labels Id-42,Phase-Deploy
+
+<wiki:toc max_depth="2" />
+
+<br>
+=1. Overview =
+This guide describes how to use Flite TTS with UniMRCP server. It assumes you are already familiar with [InstallationGuide installation] and [ConfigurationGuide configuration] tips of UniMRCP server.
+
+<br>
+=2. Requirements =
+  * UniMRCP r1037 and above
+  * Flite library and voices (http://svn.freeswitch.org/downloads/libs/flite-1.3.99-latest.tar.gz)
+<br>
+Note: The libraries and model are borrowed from FreeSWITCH (http://svn.freeswitch.org/downloads/libs/). FreeSWITCH's users can reuse what they have already installed with FreeSWITCH.
+
+<br>
+=3. Build =
+==GNU Build (Linux and other Unix variants)==
+  # Download Flite library, unpack and build it.
+{{{
+./configure
+make
+}}}
+
+
+  # Configure UniMRCP as follows
+{{{
+./configure --enable-flite-plugin --with-flite=path-to-flite-source-dir
+make
+make install
+}}}
+
+<br>
+==VS2005 Build (Windows XP, Vista, ...)==
+  # Download Flite library, unpack it into unimrcp\libs\flite directory
+  # Open flite.sln file and build the solution.
+  # Open unimrcp.sln file, include flite project into build (Build -> Configuration Manager).
+  # Build the solution.
+
+
+<br>
+=4. Configuration =
+Specify mrcpflite as a plugin in unimrcpserver.xml as follows:
+{{{
+    <plugin>
+      <engine name="Flite-1" class="mrcpflite" enable="1"/>
+    </plugin>
+}}}
+There can be multiple plugins of the same resource and it's possible to configure profile based plugins. However for the beginning you may want to enable only Flite TTS plugin and disable other TTS plugins.
