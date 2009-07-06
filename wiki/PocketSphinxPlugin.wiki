@@ -10,9 +10,9 @@ This guide describes how to use PocketSphinx ASR with UniMRCP server. It assumes
 <br>
 =2. Requirements =
   * UniMRCP r1030 and above
-  * SphinxBase library (http://www.unimrcp.org/dependencies/sphinxbase-0.4.99-latest.tar.gz)
-  * PocketSphinx library (http://www.unimrcp.org/dependencies/pocketsphinx-0.5.99-latest.tar.gz)
-  * PocketSphinx model (http://www.unimrcp.org/dependencies/communicator_semi_6000_20080321.tar.gz)
+  * [http://www.unimrcp.org/dependencies/sphinxbase-0.4.99-latest.tar.gz SphinxBase library]
+  * [http://www.unimrcp.org/dependencies/pocketsphinx-0.5.99-latest.tar.gz PocketSphinx library]
+  * [http://www.unimrcp.org/dependencies/communicator_semi_6000_20080321.tar.gz PocketSphinx model]
 <br>
 Note: The libraries and model are borrowed from FreeSWITCH (http://svn.freeswitch.org/downloads/libs/). FreeSWITCH's users can reuse what they have already installed with FreeSWITCH.
 
