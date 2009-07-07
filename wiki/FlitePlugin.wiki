@@ -10,7 +10,7 @@ This guide describes how to use Flite TTS with UniMRCP server. It assumes you ar
 <br>
 =2. Requirements =
   * UniMRCP r1037 and above
-  * [http://svn.freeswitch.org/downloads/libs/flite-1.3.99-latest.tar.gz Flite library and voices]
+  * [http://unimrcp.webhosting-for-free.com/flite-1.3.99-latest.tar.gz Flite library and voices]
 <br>
 Note: The library and voices are borrowed from FreeSWITCH (http://svn.freeswitch.org/downloads/libs/). FreeSWITCH's users can reuse what they have already installed with FreeSWITCH.
 
