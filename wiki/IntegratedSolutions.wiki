@@ -2,14 +2,16 @@
 #labels Phase-Deploy,Id-40
 
 === UniMRCP server ===
-  * [http://www.unimrcp.org/cepstral Cepstral MRCP server]. Cepstral's TTS engine is integrated into UniMRCP server as a plugin.
+  * [http://code.google.com/p/unimrcp/wiki/CepstralPlugin Cepstral TTS engine]
+  * [http://code.google.com/p/unimrcp/wiki/PocketSphinxPlugin PocketSphinx ASR engine]
+  * [http://code.google.com/p/unimrcp/wiki/FlitePlugin Flite TTS engine]
   * Looking for more solutions
 
 <br>
 === UniMRCP client ===
-  * [http://www.freeswitch.org FreeSWITCH] is an open source telephony platform. It provides ASR/TTS interface for the implementation and integration of custom ASR/TTS modules. Module which uses UniMRCP client (mod_unimrcp) to connect FreeSWITCH to MRCP compliant servers is still under the way. The use case of this module is clear, but there is still no funding ...
+  * [http://www.freeswitch.org FreeSWITCH] is an open source telephony platform. It provides an abstract interface for the integration of ASR/TTS engines. Module, which utilizes UniMRCP client stack (mod_unimrcp), allows FreeSWITCH to connect to MRCP compliant servers.
   * Looking for more solutions
 
 <br>
 <br>
-Please leave a comment below describing solution you have built or are building using UniMRCP.
+Please leave a comment below describing solution you have built using UniMRCP.
