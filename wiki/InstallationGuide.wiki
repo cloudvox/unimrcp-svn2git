@@ -2,12 +2,12 @@
 #labels Featured,Id-01,Phase-Deploy
 
 <wiki:toc max_depth="3" />
-
+<br>
 =1. Install From Source =
 ==1.1. Obtain Source ==
 ===Download Source Tarball ===
 Use the link below to download one of the available source tarballs
-    http://code.google.com/p/unimrcp/downloads/list
+    http://code.google.com/p/unimrcp/downloads/
 
 ===Checkout Source via SVN ===
 Use the command below to anonymously checkout the latest source code
@@ -15,19 +15,19 @@ Use the command below to anonymously checkout the latest source code
 
 ==1.2. Build Source ==
 ===Requirements ===
-UniMRCP depends on a number of third party tools and libraries,
-which must be installed prior to UniMRCP build.
+UniMRCP depends on a number of third party tools and libraries, which are required and must be installed first.
 
+The easiest and recommended way is to install an appropriate dependency package from the download area, which contains APR, APR-Util and Sofia-SIP libraries prepackaged for UniMRCP use.
+    http://code.google.com/p/unimrcp/downloads/
+
+Alternatively, the original packages of APR, APR-Util and Sofia-SIP libraries and patches for them can be downloaded from
+    http://www.unimrcp.org/dependencies/
+
+References:
   * Apache Portable Runtime [>=1.2.x] (http://apr.apache.org/). Whenever you want to build any part of UniMRCP, you need the Apache Portable Runtime (APR) and the APR Utility (APR-util) libraries.
 
   * Sofia-SIP [>=1.12.6] (http://sofia-sip.sourceforge.net/). Sofia-SIP library is used to implement MRCPv2 specification compliant SIP signaling. Sofia-SIP is an open-source SIP User-Agent library, compliant with the IETF RFC3261 specification.
 
-The easiest and recommended way is to install an appropriate dependency package from download are, which contains APR, APR-Util and Sofia-SIP libraries UniMRCP uses.
-    http://unimrcp.googlecode.com/files/unimrcp-deps.tar.gz (Unix)<br>
-    http://unimrcp.googlecode.com/files/unimrcp-deps.zip (Win)<br>
-
-Alternatively, original distribution of APR, APR-Util and Sofia-SIP libraries and patches for them can be downloaded from
-    http://www.unimrcp.org/dependencies/
 
 
 ===GNU Build (Linux and other Unix variants)===
@@ -127,7 +127,7 @@ plugin   - run-time loadable modules
 Use the link below to download one of the available Windows installers
     http://code.google.com/p/unimrcp/downloads/list
 ===Run Installer ===
-There are number of options to install
+There are a number of options to install
   * UniMRCP server
     * Cepstral plugin    
     * Demo synthesizer plugin    
