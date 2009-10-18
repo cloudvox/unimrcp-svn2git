@@ -30,12 +30,14 @@ Use the [http://groups.google.com/group/unimrcp Discussion Group] for anything U
 ====  I've got some issues using the project. What should I do? ====
 Feel free to raise issues using the [http://code.google.com/p/unimrcp/issues/ Issue Tracker].
 
-====  How can I contribute to the project? ====
-UniMRCP appreciates community driven initiatives and efforts. Read the [ContributionGuide Contribution Guide].
-
 ====  Should my organization become a sponsor of UniMRCP? ====
-If your organization is considering a long term use of UniMRCP, hopefully it will be smart enough to become a sponsor and invest in the project’s infrastructure. Read the [http://www.unimrcp.org/sponsorship Sponsorship Guide] on what project sponsorship assumes and what the benefits of sponsorship are.
-
+If your organization is considering a long term use of UniMRCP, hopefully it will be smart enough to become a sponsor and invest in the project’s infrastructure. Read the [http://www.unimrcp.org/sponsorship Sponsorship Guide] on what project sponsorship incurs and what the benefits of sponsorship are.
 
 ====  Should my organization become a partner of UniMRCP? ====
 UniMRCP welcomes technology related vendors and integrators to become a partner. Read the [http://www.unimrcp.org/partnership Partnership Guide].
+
+====  Are there commercial support services available for the project? ====
+UniMRCP offers commercial support and custom development packages. Read the [http://www.unimrcp.org/services Services Guide].
+
+====  How can I contribute to the project? ====
+UniMRCP welcomes community driven initiatives. Read the [http://www.unimrcp.org/contributions Contribution Guide].
