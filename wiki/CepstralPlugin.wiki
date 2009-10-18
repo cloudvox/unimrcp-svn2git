@@ -1,4 +1,4 @@
-#summary How to integrate Cepstral TTS plugin into UniMRCP server.
+#summary How to integrate Cepstral TTS into UniMRCP server.
 #labels Id-41,Phase-Deploy
 
 <wiki:toc max_depth="2" />
