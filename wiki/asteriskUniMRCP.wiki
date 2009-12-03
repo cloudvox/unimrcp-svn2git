@@ -52,12 +52,12 @@ MRCPSynth(text,options)
 text - The text to speak. Either plain text or SSML.
 
 options - Options
-  p - profile to use in mrcp.conf
-  i - digits to allow the TTS to be interrupted with
-  f - filename on disk to store audio to (audio not stored if not specified or empty)
-  l - language to use (e.g. "en-GB", "en-US", "en-AU", etc.)
-  v - voice name to use (e.g. "Daniel", "Karin", etc.)
-  g - voice gender to use (e.g. "male", "female")
+  p - profile to use in mrcp.conf<br>
+  i - digits to allow the TTS to be interrupted with<br>
+  f - filename on disk to store audio to (audio not stored if not specified or empty)<br>
+  l - language to use (e.g. "en-GB", "en-US", "en-AU", etc.)<br>
+  v - voice name to use (e.g. "Daniel", "Karin", etc.)<br>
+  g - voice gender to use (e.g. "male", "female")<br>
   a - voice age to use
 
 <br>
@@ -68,10 +68,10 @@ MRCPRecog(grammar,options)
 grammar - The grammar (either inline or URL - as supported by the ASR engine).
 
 options - Options
-  p - profile to use in mrcp.conf
-  i - digits to allow the ASR to be interrupted with (not currently implemented)
-  f - filename on play (if empty or not specified, no file is played)
-  t - Recognition timeout in milliseconds
+  p - profile to use in mrcp.conf<br>
+  i - digits to allow the ASR to be interrupted with (not currently implemented)<br>
+  f - filename on play (if empty or not specified, no file is played)<br>
+  t - Recognition timeout in milliseconds<br>
   b - allow barge-in (1) or not (0)
 
 <br>
