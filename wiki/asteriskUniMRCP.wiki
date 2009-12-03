@@ -79,20 +79,26 @@ options - Options
 =4. Example dialplan usage =
 ==4.1. Text-to-speech ==
 ===Using SSML===
+{{{
 exten => 1000,1,Answer
 exten => 1000,n,Wait(2)
 exten => 1000,n,MRCPSynth(<?xml version=\"1.0\"?><speak version=\"1.0\" xml:lang=\"en-AU\" xmlns=\"http://www.w3.org/2001/10/synthesis\"><voice name='Karin' gender='female'>Hello world!</voice></speak>,p=default&i=any&f=/tmp/synth.raw)
 exten => 1000,n,Hangup
+}}}
 
 ===Using plain text===
+{{{
 exten => 1001,1,Answer
 exten => 1001,n,Wait(2)
 exten => 1001,n,MRCPSynth(Hello world!,p=default&i=any&f=/tmp/synth.raw&l=en-GB&v=daniel&g=male)
 exten => 1001,n,Hangup
+}}}
 
 ==4.2. Speech recognition ==
+{{{
 exten => 1002,1,Answer
 exten => 1002,n,Wait(2)
 exten => 1002,n,MRCPRecog(<?xml version=\"1.0\"?><grammar xmlns=\"http://www.w3.org/2001/06/grammar\" xml:lang=\"en-GB\" version=\"1.0\" mode=\"voice\" root=\"digit\"><rule id=\"digit\"><one-of><item>one</item><item>two</item><item>three</item></one-of></rule></grammar>,p=default&i=any&t=5000&f=demo-instruct&b=1);
 exten => 1002,n,Verbose(${RECOG_RESULT})
 exten => 1002,n,Hangup
+}}}
