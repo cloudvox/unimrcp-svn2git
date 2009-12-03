@@ -50,6 +50,7 @@ This will install the res_speech_unimrcp.so and app_unimrcp.so modules to /usr/l
 MRCPSynth(text,options)
 ==Parameters==
 text - The text to speak. Either plain text or SSML.
+
 options - Options
   p - profile to use in mrcp.conf
   i - digits to allow the TTS to be interrupted with
@@ -63,7 +64,9 @@ options - Options
 <br>
 =3. Speech recognition application (MRCPRecog) =
 MRCPRecog(grammar,options)
+==Parameters==
 grammar - The grammar (either inline or URL - as supported by the ASR engine).
+
 options - Options
   p - profile to use in mrcp.conf
   i - digits to allow the ASR to be interrupted with (not currently implemented)
