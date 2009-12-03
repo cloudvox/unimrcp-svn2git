@@ -1,0 +1,95 @@
+#summary How to install the asterisk-unimrcp solution.
+
+<wiki:toc max_depth="3" />
+<br>
+=1. Install From Source =
+==1.1. Obtain Source ==
+===Download Source Tarball ===
+Use the link below to download the available source tarball
+    http://unimrcp.googlecode.com/files/uni-ast-package.tar.gz
+
+===Checkout Source via SVN ===
+Use the command below to anonymously checkout the latest source code
+    http://unimrcp.googlecode.com/svn/solutions/asterisk-unimrcp
+
+==1.2. Build Source ==
+===Requirements ===
+The Asterisk UniMRCP solution consists of a speech resource module as well as an asterisk application. It is required that UniMRCP and Asterisk be compiled and installed first.
+
+===GNU Build (Linux and other Unix variants)===
+====Additional requirements====
+  * autoconf 2.57 or newer
+  * automake
+  * libtool 1.4 or newer
+  * gcc
+  * pkg-config
+
+====Build procedure====
+{{{
+$ ./bootstrap
+$ ./configure
+$ make
+$ make install
+}}}
+
+This will install the res_speech_unimrcp.so and app_unimrcp.so modules to /usr/lib/asterisk/modules and assume that UniMRCP is located in /usr/local/unimrcp.
+
+====Configure options====
+  * To explicitly specify where to look for Asterisk, use the "--with-asterisk=" and "--with-asterisk-conf=" options.
+  * For example, if your Asterisk is installed in /usr/local/asterisk/1.6.1.10, use:
+    $ ./configure --with-unimrcp=/usr/local/unimrcp --with-asterisk=/usr/local/asterisk/1.6.1.10
+  * To explicitly specify where to place the Asterisk configuration files, use the "--with-asterisk-conf=" option:
+    $ ./configure --with-asterisk=/usr/local/asterisk/conf
+  * If "--with-asterisk" is not specified, then "/usr" will be assumed
+  * If "--with-asterisk" is specified, but not "--with-asterisk-conf", then the configuration file install path will be assumed as "$asterisk_dir/etc/asterisk", where $asterisk_dir is the directory specified by "--with-asterisk".
+  * Currently the configuration file in the source tree's conf directory for the app_mrcp module doesn't install during the "make install" build process. Until this is implemented, simply copy the conf/mrcp.conf file to /etc/asterisk, or wherever the Asterisk configurations reside.
+
+<br>
+<br>
+=3. Text-to-speech application (MRCPSynth) =
+MRCPSynth(text,options)
+==Parameters==
+text - The text to speak. Either plain text or SSML.
+options - Options
+  p - profile to use in mrcp.conf
+  i - digits to allow the TTS to be interrupted with
+  f - filename on disk to store audio to (audio not stored if not specified or empty)
+  l - language to use (e.g. "en-GB", "en-US", "en-AU", etc.)
+  v - voice name to use (e.g. "Daniel", "Karin", etc.)
+  g - voice gender to use (e.g. "male", "female")
+  a - voice age to use
+
+<br>
+<br>
+=4. Speech recognition application (MRCPRecog) =
+MRCPRecog(grammar,options)
+grammar - The grammar (either inline or URL - as supported by the ASR engine).
+options - Options
+  p - profile to use in mrcp.conf
+  i - digits to allow the ASR to be interrupted with (not currently implemented)
+  f - filename on play (if empty or not specified, no file is played)
+  t - Recognition timeout in milliseconds
+  b - allow barge-in (1) or not (0)
+
+<br>
+<br>
+=5. Example dialplan usage =
+==5.1. Text-to-speech ==
+===Using SSML===
+exten => 1000,1,Answer
+exten => 1000,n,Wait(2)
+exten => 1000,n,MRCPSynth(<?xml version=\"1.0\"?><speak version=\"1.0\" xml:lang=\"en-AU\" xmlns=\"http://www.w3.org/2001/10/synthesis\"><voice name='Karin' gender='female'>Hello world!</voice></speak>,p=default&i=any&f=/tmp/synth.raw)
+exten => 1000,n,Hangup
+
+===Using plain text===
+exten => 1001,1,Answer
+exten => 1001,n,Wait(2)
+exten => 1001,n,MRCPSynth(Hello world!,p=default&i=any&f=/tmp/synth.raw&l=en-GB&v=daniel&g=male)
+exten => 1001,n,Hangup
+
+==5.2. Speech recognition ==
+exten => 1002,1,Answer
+exten => 1002,n,Wait(2)
+exten => 1002,n,MRCPRecog(<?xml version=\"1.0\"?><grammar xmlns=\"http://www.w3.org/2001/06/grammar\" xml:lang=\"en-GB\" version=\"1.0\" mode=\"voice\" root=\"digit\"><rule id=\"digit\"><one-of><item>one</item><item>two</item><item>three</item></one-of></rule></grammar>,p=default&i=any&t=5000&f=demo-instruct&b=1);
+exten => 1002,n,Verbose(${RECOG_RESULT})
+exten => 1002,n,Hangup
