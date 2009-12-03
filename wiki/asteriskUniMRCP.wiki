@@ -10,7 +10,7 @@ Use the link below to download the available source tarball
 
 ===Checkout Source via SVN ===
 Use the command below to anonymously checkout the latest source code
-    http://unimrcp.googlecode.com/svn/solutions/asterisk-unimrcp
+    svn checkout http://unimrcp.googlecode.com/svn/solutions/asterisk-unimrcp asterisk-unimrcp
 
 ==1.2. Build Source ==
 ===Requirements ===
