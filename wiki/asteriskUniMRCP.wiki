@@ -40,13 +40,13 @@ This will install the res_speech_unimrcp.so and app_unimrcp.so modules to /usr/l
     $ ./configure --with-unimrcp=/usr/local/unimrcp --with-asterisk=/usr/local/asterisk/1.6.1.10
   * To explicitly specify where to place the Asterisk configuration files, use the "--with-asterisk-conf=" option:
     $ ./configure --with-asterisk=/usr/local/asterisk/conf
-  * If "--with-asterisk" is not specified, then "/usr" will be assumed
+  * If "--with-asterisk" is not specified, then "/usr" will be assumed.
   * If "--with-asterisk" is specified, but not "--with-asterisk-conf", then the configuration file install path will be assumed as "$asterisk_dir/etc/asterisk", where $asterisk_dir is the directory specified by "--with-asterisk".
-  * Currently the configuration file in the source tree's conf directory for the app_mrcp module doesn't install during the "make install" build process. Until this is implemented, simply copy the conf/mrcp.conf file to /etc/asterisk, or wherever the Asterisk configurations reside.
+  * Currently the configuration file in the source tree's conf directory for the app_mrcp module doesn't install during the "make install" build process. Until this is implemented, simply copy the conf/mrcp.conf file to /etc/asterisk, or wherever the Asterisk configuration files reside.
 
 <br>
 <br>
-=3. Text-to-speech application (MRCPSynth) =
+=2. Text-to-speech application (MRCPSynth) =
 MRCPSynth(text,options)
 ==Parameters==
 text - The text to speak. Either plain text or SSML.
@@ -61,7 +61,7 @@ options - Options
 
 <br>
 <br>
-=4. Speech recognition application (MRCPRecog) =
+=3. Speech recognition application (MRCPRecog) =
 MRCPRecog(grammar,options)
 grammar - The grammar (either inline or URL - as supported by the ASR engine).
 options - Options
@@ -73,8 +73,8 @@ options - Options
 
 <br>
 <br>
-=5. Example dialplan usage =
-==5.1. Text-to-speech ==
+=4. Example dialplan usage =
+==4.1. Text-to-speech ==
 ===Using SSML===
 exten => 1000,1,Answer
 exten => 1000,n,Wait(2)
@@ -87,7 +87,7 @@ exten => 1001,n,Wait(2)
 exten => 1001,n,MRCPSynth(Hello world!,p=default&i=any&f=/tmp/synth.raw&l=en-GB&v=daniel&g=male)
 exten => 1001,n,Hangup
 
-==5.2. Speech recognition ==
+==4.2. Speech recognition ==
 exten => 1002,1,Answer
 exten => 1002,n,Wait(2)
 exten => 1002,n,MRCPRecog(<?xml version=\"1.0\"?><grammar xmlns=\"http://www.w3.org/2001/06/grammar\" xml:lang=\"en-GB\" version=\"1.0\" mode=\"voice\" root=\"digit\"><rule id=\"digit\"><one-of><item>one</item><item>two</item><item>three</item></one-of></rule></grammar>,p=default&i=any&t=5000&f=demo-instruct&b=1);
