@@ -33,9 +33,10 @@ $ ./bootstrap
 $ ./configure
 $ make
 $ make install
+$ cp build/uni_version.h /usr/local/unimrcp/include/
 }}}
 
-This will install the res_speech_unimrcp.so and app_unimrcp.so modules to /usr/lib/asterisk/modules and assume that UniMRCP is located in /usr/local/unimrcp.
+This will install the res_speech_unimrcp.so and app_unimrcp.so modules to /usr/lib/asterisk/modules and assume that UniMRCP is located in /usr/local/unimrcp. Make sure that the build/uni_version.h is copied to your UniMRCP installed include directory.
 
 ====Configure options====
   * To explicitly specify where to look for Asterisk, use the "--with-asterisk=" and "--with-asterisk-conf=" options.
