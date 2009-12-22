@@ -79,7 +79,7 @@ options - Options
   i     - digits to allow the ASR to be interrupted with (not currently implemented)<br>
   f     - filename on play (if empty or not specified, no file is played)<br>
   t     - Recognition timeout in milliseconds<br>
-  b     - bargein value (no barge-in=0, ASR engine barge-in=1, Asterisk barge-in=2, Asterisk and ASR engine barge-in=3) - not implemented yet<br>
+  b     - bargein value (no barge-in=0, ASR engine barge-in=1, Asterisk barge-in=2, Asterisk and ASR engine barge-in=3) - only 0 and 1 are currently implemented<br>
   ct    - confidence threshold (0.0 - 1.0)<br>
   sl    - sensitivity level (0.0 - 1.0)<br>
   sva   - speed vs accuracy (0.0 - 1.0)<br>
