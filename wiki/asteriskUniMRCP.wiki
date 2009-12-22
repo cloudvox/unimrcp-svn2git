@@ -3,7 +3,7 @@
 <wiki:toc max_depth="3" />
 <br>
 =1. Install from source =
-==1.1. Obtain Source ==
+==1.1. Obtain source ==
 ===Download source tarball ===
 Use the link below to download the available source tarball:
     http://unimrcp.googlecode.com/files/uni-ast-package.tar.gz
@@ -126,7 +126,7 @@ exten => 1001,n,Hangup
 {{{
 exten => 1002,1,Answer
 exten => 1002,n,Wait(2)
-exten => 1002,n,MRCPRecog(<?xml version=\"1.0\"?><grammar xmlns=\"http://www.w3.org/2001/06/grammar\" xml:lang=\"en-GB\" version=\"1.0\" mode=\"voice\" root=\"digit\"><rule id=\"digit\"><one-of><item>one</item><item>two</item><item>three</item></one-of></rule></grammar>,p=default&i=any&t=5000&f=demo-instruct&b=1);
+exten => 1002,n,MRCPRecog(<?xml version=\"1.0\"?><grammar xmlns=\"http://www.w3.org/2001/06/grammar\" xml:lang=\"en-GB\" version=\"1.0\" mode=\"voice\" root=\"digit\"><rule id=\"digit\"><one-of><item>one</item><item>two</item><item>three</item></one-of></rule></grammar>,p=default&i=any&t=5000&f=demo-instruct&b=1)
 exten => 1002,n,Verbose(${RECOG_RESULT})
 exten => 1002,n,Hangup
 }}}
