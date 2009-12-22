@@ -2,14 +2,14 @@
 
 <wiki:toc max_depth="3" />
 <br>
-=1. Install From Source =
+=1. Install from source =
 ==1.1. Obtain Source ==
-===Download Source Tarball ===
-Use the link below to download the available source tarball
+===Download source tarball ===
+Use the link below to download the available source tarball:
     http://unimrcp.googlecode.com/files/uni-ast-package.tar.gz
 
 ===Checkout Source via SVN ===
-Use the command below to anonymously checkout the latest source code
+Use the command below to anonymously checkout the latest source code:
     svn checkout http://unimrcp.googlecode.com/svn/solutions/asterisk-unimrcp asterisk-unimrcp
 
 ==1.2. Build Source ==
@@ -17,7 +17,7 @@ Use the command below to anonymously checkout the latest source code
 The Asterisk UniMRCP solution consists of a speech resource module as well as an asterisk application. It is required that UniMRCP and Asterisk be compiled and installed first.
 
   * UniMRCP 0.8.0
-  * Asterisk 1.4, 1.6.0, 1.6.1 or SVN HEAD (1.6.2)
+  * Asterisk 1.4, 1.6.0, 1.6.1, 1.6.2 or SVN HEAD
 
 ===GNU Build (Linux and other Unix variants)===
 ====Additional requirements====
@@ -55,13 +55,17 @@ MRCPSynth(text,options)
 text - The text to speak. Either plain text or SSML.
 
 options - Options
-  p - profile to use in mrcp.conf<br>
-  i - digits to allow the TTS to be interrupted with<br>
-  f - filename on disk to store audio to (audio not stored if not specified or empty)<br>
-  l - language to use (e.g. "en-GB", "en-US", "en-AU", etc.)<br>
-  v - voice name to use (e.g. "Daniel", "Karin", etc.)<br>
-  g - voice gender to use (e.g. "male", "female")<br>
-  a - voice age to use
+  p  - profile to use in mrcp.conf<br>
+  i  - digits to allow the TTS to be interrupted with<br>
+  f  - filename on disk to store audio to (audio not stored if not specified or empty)<br>
+  l  - language to use (e.g. "en-GB", "en-US", "en-AU", etc.)<br>
+  v  - voice name to use (e.g. "Daniel", "Karin", etc.)<br>
+  g  - voice gender to use (e.g. "male", "female")<br>
+  a  - voice age to use<br>
+  pv - prosody volume (silent/x-soft/soft/medium/load/x-loud/default)<br>
+  pr - prosody rate (x-slow/slow/medium/fast/x-fast/default)<br>
+  ll - load lexicon (true/false)<br>
+  vv - voice variant
 
 <br>
 <br>
@@ -71,11 +75,32 @@ MRCPRecog(grammar,options)
 grammar - The grammar (either inline or URL - as supported by the ASR engine).
 
 options - Options
-  p - profile to use in mrcp.conf<br>
-  i - digits to allow the ASR to be interrupted with (not currently implemented)<br>
-  f - filename on play (if empty or not specified, no file is played)<br>
-  t - Recognition timeout in milliseconds<br>
-  b - allow barge-in (1) or not (0)
+  p     - profile to use in mrcp.conf<br>
+  i     - digits to allow the ASR to be interrupted with (not currently implemented)<br>
+  f     - filename on play (if empty or not specified, no file is played)<br>
+  t     - Recognition timeout in milliseconds<br>
+  b     - bargein value (no barge-in=0, ASR engine barge-in=1, Asterisk barge-in=2, Asterisk and ASR engine barge-in=3) - not implemented yet<br>
+  ct    - confidence threshold (0.0 - 1.0)<br>
+  sl    - sensitivity level (0.0 - 1.0)<br>
+  sva   - speed vs accuracy (0.0 - 1.0)<br>
+  nb    - n-best list length<br>
+  nit   - no input timeout<br>
+  sit   - start input timers (true/false)<br>
+  sct   - speech complete timeout<br>
+  sint  - speech incomplete timeout<br>
+  dit   - dtmf interdigit timeout<br>
+  dtt   - dtmf terminate timout<br>
+  dttc  - dtmf terminate characters<br>
+  sw    - save waveform (true/false)<br>
+  nac   - new audio channel (true/false)<br>
+  sl    - speech language (en-US/en-GB/etc.)<br>
+  rm    - recognition mode<br>
+  hmaxd - hotword max duration<br>
+  hmind - hotword min duration<br>
+  cdb   - clear dtmf buffer (true/false)<br>
+  enm   - early no match (true/false)<br>
+  iwu   - input waveform URI<br>
+  mt    - media type
 
 <br>
 <br>
