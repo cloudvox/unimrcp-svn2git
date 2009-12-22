@@ -8,18 +8,18 @@
 Use the link below to download the available source tarball:
     http://unimrcp.googlecode.com/files/uni-ast-package.tar.gz
 
-===Checkout Source via SVN ===
+===Checkout source via SVN ===
 Use the command below to anonymously checkout the latest source code:
     svn checkout http://unimrcp.googlecode.com/svn/solutions/asterisk-unimrcp asterisk-unimrcp
 
-==1.2. Build Source ==
+==1.2. Build source ==
 ===Requirements ===
 The Asterisk UniMRCP solution consists of a speech resource module as well as an asterisk application. It is required that UniMRCP and Asterisk be compiled and installed first.
 
   * UniMRCP 0.8.0
   * Asterisk 1.4, 1.6.0, 1.6.1, 1.6.2 or SVN HEAD
 
-===GNU Build (Linux and other Unix variants)===
+===GNU build (Linux and other Unix variants)===
 ====Additional requirements====
   * autoconf 2.57 or newer
   * automake
