@@ -1,19 +1,22 @@
 #summary Platforms (operating systems) UniMRCP runs on.
 #labels Id-06,Phase-Deploy
 
-Below is the list of platforms UniMRCP supports and has being actively developed on.
+The project has actively being developed on 32 bit Windows and Linux. Recently 64 bit Windows and Linux have been included in the development environment too. 
+<br>
+Below is the list of platforms UniMRCP has been tested and is known to work on.
 
-  * Windows (32 bit)
-    * XP SP2
+  * Windows (32 bit, 64 bit)
+    * Windows XP SP2
+    * Windows Server 2003 SP1
     * Vista SP1
-  * Linux (32 bit)
-    * Fedora 10 
-    * CentOS 5.1 
+    * Windows 7
+  * Linux (32 bit, 64 bit)
+    * CentOS 5.3
+    * Fedora 12
     * RHEL 5, RHEL 4.6
-
 
 <br>
 <br>
 UniMRCP should run on platforms [http://apr.apache.org/ APR] (Apache Portable Runtime) supports. Typically those platforms are Windows and Unix variants.
 <br>
-Please leave a comment below, if you used or at least compile and basically tested UniMRCP on platforms not listed above.
+Please leave a comment below, if you used or at least compiled and basically tested UniMRCP on platforms not listed above.
