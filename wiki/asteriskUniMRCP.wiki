@@ -76,10 +76,10 @@ grammar - The grammar (either inline or URL - as supported by the ASR engine).
 
 options - Options
   p     - profile to use in mrcp.conf<br>
-  i     - digits to allow the ASR to be interrupted with (not currently implemented)<br>
+  i     - digits to allow the ASR to be interrupted with (set to none for DTMF grammars to allow DTMF to be sent to the MRCP server, otherwise if "any" or other digits specified, ASR will be interrupted and the digit will be returned in dialplan)<br>
   f     - filename on play (if empty or not specified, no file is played)<br>
   t     - Recognition timeout in milliseconds<br>
-  b     - bargein value (no barge-in=0, ASR engine barge-in=1, Asterisk barge-in=2) - only 0 and 1 are currently implemented<br>
+  b     - bargein value (no barge-in=0, ASR engine barge-in=1, Asterisk barge-in=2)<br>
   ct    - confidence threshold (0.0 - 1.0)<br>
   sl    - sensitivity level (0.0 - 1.0)<br>
   sva   - speed vs accuracy (0.0 - 1.0)<br>
@@ -102,6 +102,9 @@ options - Options
   iwu   - input waveform URI<br>
   mt    - media type
 
+The recognition result is stored in the dialplan variable RECOG_RESULT.
+
+If a URI grammar is used, especially with Nuance Speech Server, the HTTP header Content-type needs to be set by the web server hosting the grammar.
 <br>
 <br>
 =4. Example dialplan usage =
