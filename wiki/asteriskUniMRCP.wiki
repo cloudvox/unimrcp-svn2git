@@ -109,13 +109,37 @@ If a URI grammar is used, especially with Nuance Speech Server, the HTTP header 
 <br>
 <br>
 =4. Generic speech recognition API =
-The module res_speech_unimrcp implements generic speech recognition API of Asterisk. It allows to develop or reuse speech recognition enabled applications based on Asterisk dialplan and/or gateway interface (AGI).
+The module res_speech_unimrcp implements generic speech recognition API of Asterisk. It allows to develop or reuse speech recognition enabled applications based on Asterisk dialplan or gateway interface (AGI).
+<br>
 <br>
 http://www.voip-info.org/wiki/view/Asterisk+Generic+Speech+API
 <br>
 http://www.voip-info.org/wiki/view/Asterisk+AGI
 
 ==How to configure==
+This module loads its internal configuration from /etc/asterisk/res-speech-unimrcp.conf with further reference to the configuration of UniMRCP client library, which is typically located in /usr/local/unimrcp/conf directory.
+<br>
+To get started there are only a few things to configure.
+  * Open /etc/asterisk/res-speech-unimrcp.conf and specify one of the available UniMRCP profiles. These profiles are defined in /usr/local/unimrcp/conf/client-profiles directory. More profiles can be added there.
+{{{
+  [general]
+  unimrcp-profile = uni2      ; UniMRCP MRCPv2 Server
+  ;unimrcp-profile = uni1     ; UniMRCP MRCPv1 Server
+  ;unimrcp-profile = lv2      ; LumenVox MRCPv2 Server
+  ;unimrcp-profile = lv1      ; LumenVox MRCPv1 Server
+  ;unimrcp-profile = nss2     ; Nuance MRCPv2 Server
+  ;unimrcp-profile = nss1     ; Nuance MRCPv1 Server
+}}}
+
+  * Open /usr/local/unimrcp/conf/unimrcpclient.xml, go to the properties and specify IP address Asterisk is running on and the IP address of an MRCP server.
+{{{
+  <properties>
+    <ip>10.10.0.1</ip>
+    <server-ip>10.10.0.2</server-ip>
+  </properties>
+}}}
+
+
 ==Sending commands==
   * SpeechCreate(Engine Name)
   * SpeechLoadGrammar(Grammar Name|Path)
