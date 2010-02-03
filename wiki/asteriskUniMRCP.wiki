@@ -108,8 +108,36 @@ The recognition result is stored in the dialplan variable RECOG_RESULT.
 If a URI grammar is used, especially with Nuance Speech Server, the HTTP header Content-type needs to be set by the web server hosting the grammar.
 <br>
 <br>
-=4. Example dialplan usage =
-==4.1. Text-to-speech ==
+=4. Generic speech recognition API =
+The module res_speech_unimrcp implements generic speech recognition API of Asterisk. It allows to develop or reuse speech recognition enabled applications based on Asterisk dialplan and/or gateway interface (AGI).
+<br>
+http://www.voip-info.org/wiki/view/Asterisk+Generic+Speech+API
+<br>
+http://www.voip-info.org/wiki/view/Asterisk+AGI
+
+==How to configure==
+==Sending commands==
+  * SpeechCreate(Engine Name)
+  * SpeechLoadGrammar(Grammar Name|Path)
+  * SpeechUnloadGrammar(Grammar Name)
+  * SpeechActivateGrammar(Grammar Name)
+  * SpeechStart()
+  * SpeechBackground(Sound File|Timeout)
+  * SpeechDeactivateGrammar(Grammar Name)
+  * SpeechProcessingSound(Sound File)
+  * SpeechDestroy()
+
+==Retrieving results==
+  * ${SPEECH(status)}
+  * ${SPEECH(spoke)}
+  * ${SPEECH(results)}
+  * ${SPEECH_SCORE(result number)}
+  * ${SPEECH_TEXT(result number)}
+  * ${SPEECH_GRAMMAR(result number)}
+<br>
+<br>
+=5. Example dialplan usage =
+==5.1. Text-to-speech application ==
 ===Using SSML===
 {{{
 exten => 1000,1,Answer
@@ -126,11 +154,30 @@ exten => 1001,n,MRCPSynth(Hello world!,p=default&i=any&f=/tmp/synth.raw&l=en-GB&
 exten => 1001,n,Hangup
 }}}
 
-==4.2. Speech recognition ==
+==5.2. Speech recognition application ==
 {{{
 exten => 1002,1,Answer
 exten => 1002,n,Wait(2)
 exten => 1002,n,MRCPRecog(<?xml version=\"1.0\"?><grammar xmlns=\"http://www.w3.org/2001/06/grammar\" xml:lang=\"en-GB\" version=\"1.0\" mode=\"voice\" root=\"digit\"><rule id=\"digit\"><one-of><item>one</item><item>two</item><item>three</item></one-of></rule></grammar>,p=default&i=any&t=5000&f=demo-instruct&b=1)
 exten => 1002,n,Verbose(${RECOG_RESULT})
 exten => 1002,n,Hangup
+}}}
+
+==5.3. Generic speech recognition API ==
+{{{
+exten => s,1,Answer()
+exten => s,2,SpeechCreate()
+exten => s,3,SpeechLoadGrammar(digit,/usr/local/unimrcp/data/grammar.xml)
+exten => s,4,SpeechActivateGrammar(digit)
+exten => s,5,SpeechBackground(hello-world,20)
+exten => s,6,GotoIf($["${SPEECH(results)}" = "0"]?7:9)
+exten => s,7,Playback(vm-nonumber)
+exten => s,8,Goto(5)
+exten => s,9,Verbose(1,The recognized input is ${SPEECH_TEXT(0)})
+exten => s,10,Verbose(1,The score is ${SPEECH_SCORE(0)})
+exten => s,11,Verbose(1,The matched grammar is ${SPEECH_GRAMMAR(0)})
+exten => s,12,SpeechDeactivateGrammar(digit)
+exten => s,13,SpeechUnloadGrammar(digit)
+exten => s,14,SpeechDestroy()
+exten => s,15,Hangup()
 }}}
