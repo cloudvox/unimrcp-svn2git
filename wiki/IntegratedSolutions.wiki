@@ -9,7 +9,8 @@
 
 <br>
 === UniMRCP client ===
-  * [http://www.freeswitch.org FreeSWITCH] is an open source telephony platform. It provides an abstract interface for the integration of ASR/TTS engines. Module, which utilizes UniMRCP client stack (mod_unimrcp), allows FreeSWITCH to connect to MRCP compliant servers.
+  * [http://www.freeswitch.org FreeSWITCH] is an open source telephony platform
+  * [http://www.asterisk.org Asterisk] is an open source telephony platform
   * Looking for more solutions
 
 <br>
