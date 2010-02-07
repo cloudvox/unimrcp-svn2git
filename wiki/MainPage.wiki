@@ -1,6 +1,7 @@
 #summary UniMRCP Wiki Main Page
 
 <br>
+http://www.unimrcp.org/manuals.png
 == Manuals ==
 
   * [InstallationGuide Installation Guide]
@@ -9,6 +10,8 @@
   * [ServerDeploymentGuide Server Deployment Guide]
 
 <br>
+<br>
+http://www.unimrcp.org/devdocs.png
 == Developer Documentation ==
 
   * [ClientIntegrationGuide Client Integration Guide]
@@ -17,6 +20,8 @@
 
 
 <br>
+<br>
+http://www.unimrcp.org/materials.png
 == Materials ==
   * [FAQ]
 
