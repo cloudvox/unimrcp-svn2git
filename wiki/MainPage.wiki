@@ -10,18 +10,20 @@ http://www.unimrcp.org/manuals.png
   * [ClientDeploymentGuide Client Deployment Guide]
   * [ServerDeploymentGuide Server Deployment Guide]
 
+  * [http://wiki.freeswitch.org/wiki/Mod_unimrcp FreeSWITCH Integration]
+  * [asteriskUniMRCP Asterisk Integration]
+
+  * [PocketSphinxPlugin PocketSphinx Plugin]
+  * [FlitePlugin Flite Plugin]
+  * [CepstralPlugin Cepstral Plugin]
+
 <br>
 == Materials ==
   * [FAQ]
   * [SupportedPlatforms Supported Platforms]
-  * [InteroperabilityGuide Interoperability Guide]
+  * [InteroperabilityGuide Interoperability Matrix]
     * [LumenVoxInterop LumenVox Interoperability]
   * [IntegratedSolutions Integrated Solutions]
-    * [http://wiki.freeswitch.org/wiki/Mod_unimrcp FreeSWITCH Integration]
-    * [asteriskUniMRCP Asterisk Integration]
-    * [PocketSphinxPlugin PocketSphinx Plugin]
-    * [FlitePlugin Flite Plugin]
-    * [CepstralPlugin Cepstral Plugin]
 
 <br>
 == Developer Documentation ==
