@@ -11,7 +11,6 @@ http://www.unimrcp.org/manuals.png
 
 <br>
 <br>
-http://www.unimrcp.org/devdocs.png
 == Developer Documentation ==
 
   * [ClientIntegrationGuide Client Integration Guide]
@@ -21,7 +20,6 @@ http://www.unimrcp.org/devdocs.png
 
 <br>
 <br>
-http://www.unimrcp.org/materials.png
 == Materials ==
   * [FAQ]
 
