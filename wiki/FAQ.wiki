@@ -1,43 +1,4 @@
 #summary Frequently asked questions about UniMRCP project.
 #labels Phase-Support,Id-21,Featured
 
-<wiki:toc max_depth="4"/>
-====  What is UniMRCP? ====
-UniMRCP is an open source cross-platform implementation of Media Resource Control Protocol (MRCP).
-
-====  What version of MRCP does project support? ====
-UniMRCP supports both MRCPv1 and MRCPv2.
-
-====  What platforms (operating systems) does UniMRCP run on? ====
-UniMRCP has been actively developed and tested on Windows (XP, Vista) and Linux distributions (Fedora, CentOS).
-See [SupportedPlatforms Supported Platforms] for more info.
-
-====  What license is UniMRCP released under? Can I use UniMRCP in closed source, commercial projects? ====
-UniMRCP is released under Apache 2.0 license. Open as well as closed source, commercial UniMRCP integrated solutions may exist.
-
-====  I'm very new to UniMRCP. Where should I start? ====
-Read the [InstallationGuide Installation Guide] first.
-
-====  I'm looking for MRCP client to integrate into my application. What should I use? ====
-In brief, you should use libunimrclient library. Also check demo unimrcpclient application, which is based on libunimrcpclient library. Read the [ClientIntegrationGuide Client Integration Guide] for the detailed instructions.
-
-====  I'm looking for MRCP server for my ASR/TTS engine. What should I do? ====
-In brief, you should write another plugin for unimrcpserver using your ASR/TTS engine. There are number of plugins available in the source tree. Read the [PluginImplementationGuide Plugin Implementation Guide] for the detailed instructions.
-
-====  I've got some ideas around the project. Where can I discuss them? ====
-Use the [http://groups.google.com/group/unimrcp Discussion Group] for anything UniMRCP related.
-
-====  I've got some issues using the project. What should I do? ====
-Feel free to raise issues using the [http://code.google.com/p/unimrcp/issues/ Issue Tracker].
-
-====  Should my organization become a sponsor of UniMRCP? ====
-If your organization is considering a long term use of UniMRCP, hopefully it will be smart enough to become a sponsor and invest in the project’s infrastructure. Read the [http://www.unimrcp.org/sponsorship Sponsorship Guide] on what project sponsorship incurs and what the benefits of sponsorship are.
-
-====  Should my organization become a partner of UniMRCP? ====
-UniMRCP welcomes technology related vendors and integrators to become a partner. Read the [http://www.unimrcp.org/partnership Partnership Guide].
-
-====  Are there commercial support services available for the project? ====
-UniMRCP offers commercial support and custom development packages. Read the [http://www.unimrcp.org/services Services Guide].
-
-====  How can I contribute to the project? ====
-UniMRCP welcomes community driven initiatives. Read the [http://www.unimrcp.org/contributions Contribution Guide].
+<wiki:gadget url="http://unimrcp.googlecode.com/svn/misc/gadget/faq.xml" width="700" height="1800" border=0 />
