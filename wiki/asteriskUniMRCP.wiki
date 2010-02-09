@@ -1,12 +1,6 @@
 #summary How to install the UniMRCP connector bridge for Asterisk.
 #labels Phase-Deploy,Id-44
 
-#summary How to install the asterisk-unimrcp solution.
-#labels Phase-Deploy,Id-44
-
-WARNING: This wiki page will be moved to http://www.unimrcp.org/asterisk-connector-bridge soon.
-<br>
-
 <wiki:toc max_depth="3" />
 <br>
 =1. Install from source =
