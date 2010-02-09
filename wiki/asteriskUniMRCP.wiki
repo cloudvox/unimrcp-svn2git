@@ -1,4 +1,4 @@
 #summary How to install the UniMRCP connector bridge for Asterisk.
 #labels Phase-Deploy,Id-44
 
-<wiki:gadget> url="http://unimrcp.googlecode.com/svn/misc/gadget/docs.xml" width="700" height="5300" border=0 />
+<wiki:gadget url="http://unimrcp.googlecode.com/svn/misc/gadget/docs.xml" width="700" height="5300" border=0 />
