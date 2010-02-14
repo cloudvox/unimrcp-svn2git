@@ -1,4 +1,4 @@
 #summary How to deploy UniMRCP server.
 #labels Id-05,Phase-Deploy
 
-<wiki:gadget url="http://unimrcp.googlecode.com/svn/misc/docs/server-typical-setup.xml" width="700" height="3500" border=0 />
+<wiki:gadget url="http://unimrcp.googlecode.com/svn/misc/docs/server-typical-setup.xml" width="700" height="2000" border=0 />
