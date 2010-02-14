@@ -6,16 +6,13 @@ http://www.unimrcp.org/manuals.png
 == Manuals ==
 
   * [InstallationGuide Installation Guide]
-  * [ConfigurationGuide Configuration Guide]
+  * [SupportedPlatforms Supported Platforms]
+  * [ConfigurationGuide Configuration Guide (<=0.9.0)]
+  * [ClientConfigurationGuide Client Configuration Guide (>=0.10.0)]
+  * [ServerConfigurationGuide Server Configuration Guide (>=0.10.0)]
   * [ClientDeploymentGuide Client Deployment Guide]
   * [ServerDeploymentGuide Server Deployment Guide]
-
-<br>
-== Materials ==
   * [FAQ]
-  * [SupportedPlatforms Supported Platforms]
-  * [InteroperabilityGuide Interoperability Matrix]
-    * [LumenVoxInterop LumenVox Interoperability]
 
 <br>
 == [IntegratedSolutions Integrated Solutions] ==
@@ -27,8 +24,12 @@ http://www.unimrcp.org/manuals.png
   * [CepstralPlugin Cepstral Plugin]
 
 <br>
-== Developer Documentation ==
+== [InteroperabilityGuide Interoperability Matrix] ==
+  * [LumenVoxInterop LumenVox Interoperability]
+  * [NuanceInterop Nuance Interoperability]
 
+<br>
+== Developer Documentation ==
   * [ClientIntegrationGuide Client Integration Guide]
   * [ServerIntegrationGuide Server Integration Guide]
   * [PluginImplementationGuide Plugin Implementation Guide]
