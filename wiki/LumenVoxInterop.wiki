@@ -1,4 +1,4 @@
 #summary How to deploy UniMRCP client and LumenVox MRCPv1 or MRCPv2 server.
 #labels Phase-Deploy,Id-31
 
-<wiki:gadget url="http://unimrcp.googlecode.com/svn/misc/docs/lumenvox-interop.xml" width="700" height="3500" border=0 />
+<wiki:gadget url="http://unimrcp.googlecode.com/svn/misc/docs/lumenvox-interop.xml" width="700" height="1200" border=0 />
