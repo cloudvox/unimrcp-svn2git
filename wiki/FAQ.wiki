@@ -1,4 +1,4 @@
 #summary Frequently asked questions about UniMRCP project.
 #labels Phase-Support,Id-21,Featured
 
-<wiki:gadget url="http://unimrcp.googlecode.com/svn/misc/gadget/faq.xml" width="700" height="1800" border=0 />
+<wiki:gadget url="http://unimrcp.googlecode.com/svn/misc/docs/faq.xml" width="700" height="1800" border=0 />
