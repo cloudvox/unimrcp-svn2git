@@ -7,9 +7,8 @@ http://www.unimrcp.org/manuals.png
 
   * [InstallationGuide Installation Guide]
   * [SupportedPlatforms Supported Platforms]
-  * [ConfigurationGuide Configuration Guide (<=0.9.0)]
-  * [ClientConfigurationGuide Client Configuration Guide (>=0.10.0)]
-  * [ServerConfigurationGuide Server Configuration Guide (>=0.10.0)]
+  * [ClientConfigurationGuide Client Configuration Guide]
+  * [ServerConfigurationGuide Server Configuration Guide]
   * [ClientDeploymentGuide Client Deployment Guide]
   * [ServerDeploymentGuide Server Deployment Guide]
   * [FAQ]
