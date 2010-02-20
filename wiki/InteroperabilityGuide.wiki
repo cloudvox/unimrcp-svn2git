@@ -27,6 +27,7 @@ Below is the list of MRCP vendors/products UniMRCP client and server are known t
 
 || *Vendor* || *MRCPv1* || *MRCPv2* ||
 || [LumenVoxInterop Lumenvox] || Completed || Completed ||
+|| [NuanceInterop Nuance] || Completed || Completed ||
 || IBM WVS || Completed || N/A ||
 
 
