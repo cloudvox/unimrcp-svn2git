@@ -1,4 +1,4 @@
 #summary How to use MRCP message.
 #labels Id-14,Phase-Implementation
 
-<wiki:gadget url="http://unimrcp.googlecode.com/svn/misc/docs/mrcp-message-usage.xml" width="700" height="3500" border=0 />
+<wiki:gadget url="http://unimrcp.googlecode.com/svn/misc/docs/mrcp-message-usage.xml" width="700" height="5000" border=0 />
