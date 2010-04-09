@@ -1,5 +1,5 @@
 #summary UniMRCP Wiki Main Page
-#labels Phase-Support
+#labels Phase-Support,Id-22
 
 <br>
 http://www.unimrcp.org/manuals.png
@@ -32,3 +32,5 @@ http://www.unimrcp.org/manuals.png
   * [ClientIntegrationGuide Client Integration Guide]
   * [ServerIntegrationGuide Server Integration Guide]
   * [PluginImplementationGuide Plugin Implementation Guide]
+  * [MRCPMessageUsage MRCP Message Usage Guide]
+  
