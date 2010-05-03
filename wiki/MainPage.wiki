@@ -20,7 +20,6 @@ http://www.unimrcp.org/manuals.png
 
   * [PocketSphinxPlugin PocketSphinx Plugin]
   * [FlitePlugin Flite Plugin]
-  * [CepstralPlugin Cepstral Plugin]
 
 <br>
 == [InteroperabilityGuide Interoperability Matrix] ==
