@@ -2,17 +2,14 @@
 #labels Phase-Deploy,Id-40
 
 === UniMRCP server ===
-  * [http://code.google.com/p/unimrcp/wiki/CepstralPlugin Cepstral TTS engine]
   * [http://code.google.com/p/unimrcp/wiki/PocketSphinxPlugin PocketSphinx ASR engine]
   * [http://code.google.com/p/unimrcp/wiki/FlitePlugin Flite TTS engine]
-  * Looking for more solutions
 
 <br>
 === UniMRCP client ===
   * [http://www.freeswitch.org FreeSWITCH] is an open source telephony platform
   * [http://www.asterisk.org Asterisk] is an open source telephony platform
-  * Looking for more solutions
 
 <br>
 <br>
-Please leave a comment below describing solution you have built using UniMRCP.
+Please leave a comment below describing solutions you have built using UniMRCP.
