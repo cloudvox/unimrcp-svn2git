@@ -2,12 +2,12 @@
 #labels Phase-Deploy,Id-30
 
 ==== Overview ====
-This guide provides information regarding UniMRCP interoperability. UniMRCP slogan is compliance with standards. Therefore, UniMRCP client and server should work with all MRCPv1 and MRCPv2 compliant implementations.
+This guide provides information regarding UniMRCP interoperability. UniMRCP has been developed in accordance with the MRCP specifications. Therefore, UniMRCP client and server should inter-operate with all MRCPv1 and MRCPv2 compliant implementations.
 <br>
 Below is the list of MRCP vendors/products UniMRCP client and server are known to work with. The interoperability has been tested internally either on UniMRCP or vendor side.
 
 <br>
-==== UniMRCP Server (Cepstral TTS) ====
+==== UniMRCP Server  ====
 
 || *Vendor* || *MRCPv1* || *MRCPv2* ||
 || Voxpilot || Completed || N/A ||
@@ -21,6 +21,7 @@ Below is the list of MRCP vendors/products UniMRCP client and server are known t
 || *Vendor* || *MRCPv1* || *MRCPv2* ||
 || Nuance || Completed || Completed ||
 || IBM WVS || Completed || N/A ||
+|| SpeechPro || Completed || N/A ||
 
 <br>
 ==== UniMRCP Client (ASR) ====
@@ -29,11 +30,12 @@ Below is the list of MRCP vendors/products UniMRCP client and server are known t
 || [LumenVoxInterop Lumenvox] || Completed || Completed ||
 || [NuanceInterop Nuance] || Completed || Completed ||
 || IBM WVS || Completed || N/A ||
+|| SpeechPro || Completed || N/A ||
 
 
 <br>
 <br>
-If you used or at least basically tested UniMRCP client or server with MRCP vendors/products not mentioned above, please leave a comment below by providing the following information
+If you used UniMRCP client or server with MRCP vendors/products not mentioned above, please leave a comment below by providing the following information
   * Vendor:
   * Protocol: MRCPv1 and/or MRCPv2
   * Resource: ASR and/or TTS
