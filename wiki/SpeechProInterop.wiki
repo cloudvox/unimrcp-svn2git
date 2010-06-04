@@ -1,0 +1,4 @@
+#summary How to deploy UniMRCP client and SpeechPro MRCPv1 server.
+#labels Phase-Deploy,Id-33
+
+<wiki:gadget url="http://unimrcp.googlecode.com/svn/misc/docs/speechpro-interop.xml" width="700" height="1200" border=0 />
