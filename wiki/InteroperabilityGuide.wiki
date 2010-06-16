@@ -21,7 +21,7 @@ Below is the list of MRCP vendors/products UniMRCP client and server are known t
 || *Vendor* || *MRCPv1* || *MRCPv2* ||
 || [NuanceInterop Nuance] || Completed || Completed ||
 || IBM WVS || Completed || N/A ||
-|| [SpeechProInterop SpeechPro] || Completed || N/A ||
+|| [SpeechProInterop Speech Technology Сenter] || Completed || N/A ||
 
 <br>
 ==== UniMRCP Client (ASR) ====
@@ -30,7 +30,7 @@ Below is the list of MRCP vendors/products UniMRCP client and server are known t
 || [LumenVoxInterop Lumenvox] || Completed || Completed ||
 || [NuanceInterop Nuance] || Completed || Completed ||
 || IBM WVS || Completed || N/A ||
-|| [SpeechProInterop SpeechPro] || Completed || N/A ||
+|| [SpeechProInterop Speech Technology Сenter] || Completed || N/A ||
 
 
 <br>
