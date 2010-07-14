@@ -1,4 +1,4 @@
 #summary How to configure UniMRCP server.
-#labels Phase-Deploy,Id-03
+#labels Phase-Deploy,Id-03,Featured
 
 <wiki:gadget url="http://unimrcp.googlecode.com/svn/misc/docs/server-configuration-guide.xml" width="700" height="3500" border=0 />
