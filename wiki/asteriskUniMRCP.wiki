@@ -1,4 +1,6 @@
-#summary How to install the UniMRCP connector bridge for Asterisk.
-#labels Phase-Deploy,Id-44
+#summary How to install, configure and use UniMRCP modules for Asterisk.
+#labels Phase-Deploy,Id-44,Featured
 
-<wiki:gadget url="http://unimrcp.googlecode.com/svn/misc/docs/asterisk-unimrcp.xml" width="700" height="5300" border=0 />
+http://www.unimrcp.net/docs/pdf/pdficon_large.png [http://www.unimrcp.net/docs/pdf/UniMRCP%20for%20Asterisk.pdf UniMRCP for Asterisk].
+
+<wiki:gadget url="http://unimrcp.net/docs/gadget/asterisk-unimrcp.xml" width="1000" height="12000" border=0 />
