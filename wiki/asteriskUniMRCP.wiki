@@ -3,4 +3,4 @@
 
 http://www.unimrcp.net/docs/pdf/pdficon_large.png [http://www.unimrcp.net/docs/pdf/UniMRCP%20for%20Asterisk.pdf UniMRCP for Asterisk].
 
-<wiki:gadget url="http://unimrcp.net/docs/gadget/asterisk-unimrcp.xml" width="1000" height="12000" border=0 />
+<wiki:gadget url="http://unimrcp.net/docs/gadget/asterisk-unimrcp.xml" width="1000" height="13500" border=0 />
