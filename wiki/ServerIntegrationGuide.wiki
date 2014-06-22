@@ -1,40 +1,6 @@
 #summary How to use UniMRCP server library.
 #labels Id-11,Phase-Implementation
 
-<wiki:toc max_depth="1"/>
+*This page has moved. Please check out the following document instead.*
 
-=1. Overview =
-This guide describes how to integrate [http://code.google.com/p/unimrcp/source/browse/#svn/trunk/platforms/libunimrcp-server UniMRCP server library] into 3-rd party applications to provide MRCP v1/v2 server capabilities. Perhaps stand alone UniMRCP server application built on top of UniMRCP server library can be used instead.
-<br>
-<br>
-=2. Server Stack Initialization =
-== Start server stack processing ==
-Sample code below shows one-time creation of server stack instance.
-{{{
-#include "unimrcp_server.h"
-
-/* create default directory layout relative to root directory path */
-apt_dir_layout_t *dir_layout = apt_default_dir_layout_create(root_dir_path,pool);
-/* start server stack processing */
-mrcp_server_t *server = unimrcp_server_start(dir_layout);
-}}}
-<br>
-<br>
-=3. Server Stack Deinitialization =
-== Shutdown server stack processing ==
-{{{
-/* shutdown server stack processing */
-unimrcp_server_shutdown(server);
-}}}
-<br>
-<br>
-=4. References =
-  * Fully functional unimrcpserver application built on top of libunimrcpserver library can be found in the [http://code.google.com/p/unimrcp/source/browse/#svn/trunk/platforms/unimrcp-server platforms/unimrcp-server] directory of the source tree.
-  * UML based [http://unimrcp.webhosting-for-free.com/ea/index.htm design concepts] include hierarchy, activity and sequence diagrams of the server stack.
-<br>
-<br>
-=5. F.A.Q. =
-  * I need MRCP server for my ASR/TTS engine. Should I write another application based on libunimrcpserver library?
-    No, you shouldn't. You just need to implement another plugin for unimrcpserver application using your ASR/TTS engine. See [PluginImplementationGuide plugin implementation guide] for more info.
-  * When would I need to write another application based on libunimrcpserver library taking into account that unimrcpserver application already exists?
-    Suppose you have already implemented a media server application and want to enhance it with MRCP server capabilities. In this case you can easily integrate libunimrcpserver library into your media server.
+http://www.unimrcp.org/manuals/pdf/ServerIntegrationManual.pdf
