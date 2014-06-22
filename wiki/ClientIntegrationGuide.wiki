@@ -1,4 +1,6 @@
 #summary How to use UniMRCP client library.
 #labels Id-10,Phase-Implementation
 
-<wiki:gadget url="http://unimrcp.googlecode.com/svn/misc/docs/client-integration-guide.xml" width="700" height="3500" border=0 />
+*This page has moved. Please check out the following document instead.*
+
+http://www.unimrcp.org/manuals/pdf/ClientIntegrationManual.pdf
