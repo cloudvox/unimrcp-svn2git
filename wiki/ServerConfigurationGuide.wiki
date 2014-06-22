@@ -1,6 +1,6 @@
 #summary How to configure UniMRCP server.
 #labels Phase-Deploy,Id-03
 
-* This page has moved. Please check out the following document instead *
+* This page has moved. Please check out the following document instead. *
 
 http://www.unimrcp.org/manuals/pdf/ServerConfigurationManual.pdf
