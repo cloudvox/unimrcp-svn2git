@@ -1,4 +1,6 @@
 #summary How to deploy UniMRCP server.
 #labels Id-05,Phase-Deploy
 
-<wiki:gadget url="http://unimrcp.googlecode.com/svn/misc/docs/server-typical-setup.xml" width="700" height="2000" border=0 />
+* This page has moved. Please check out the following document instead.*
+
+http://www.unimrcp.org/manuals/pdf/ServerConfigurationManual.pdf
