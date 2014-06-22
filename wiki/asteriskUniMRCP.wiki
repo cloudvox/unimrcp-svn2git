@@ -1,6 +1,6 @@
 #summary How to install, configure and use UniMRCP modules for Asterisk.
-#labels Phase-Deploy,Id-44,Featured
+#labels Phase-Deploy,Id-44
 
-http://www.unimrcp.net/docs/pdf/pdficon_large.png [http://www.unimrcp.net/docs/pdf/UniMRCP%20for%20Asterisk.pdf UniMRCP for Asterisk].
+*This page has moved. Please check out the following page instead.*
 
-<wiki:gadget url="http://unimrcp.net/docs/gadget/asterisk-unimrcp.xml" width="1000" height="13500" border=0 />
+http://www.unimrcp.org/asterisk
