@@ -1,4 +1,6 @@
 #summary How to install UniMRCP project.
-#labels Featured,Id-01,Phase-Deploy
+#labels Id-01,Phase-Deploy
 
-<wiki:gadget url="http://unimrcp.googlecode.com/svn/misc/docs/installation-guide.xml" width="700" height="4000" border=0 />
+* This page has moved. Please check  out the following document instead. *
+
+http://www.unimrcp.org/manuals/pdf/InstallationManual.pdf
