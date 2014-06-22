@@ -1,9 +1,6 @@
 #summary How to implement TTS/ASR plugin for UniMRCP server.
 #labels Id-12,Phase-Implementation
 
-<wiki:toc max_depth="2"/>
+*This page has moved. Please check out the following document instead.*
 
-=1. Overview =
-This guide describes how to implement UniMRCP server plugin.
-
-TO BE DONE!
+http://www.unimrcp.org/manuals/pdf/PluginImplementationManual.pdf
