@@ -1,5 +1,5 @@
 #summary How to configure UniMRCP client.
-#labels Phase-Deploy,Id-02,Featured
+#labels Phase-Deploy,Id-02
 
 * This page has moved. Please check out the following document instead.*
 
