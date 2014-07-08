@@ -4,6 +4,12 @@
 <wiki:toc max_depth="2" />
 
 <br>
+=0. Status =
+Please read the following post before you start:
+
+[http://groups.google.com/forum/?fromgroups#!topic/unimrcp/yUWi_-FIRqA Future Support?]
+
+<br>
 =1. Overview =
 This guide describes how to use Flite TTS with UniMRCP server. It assumes you are already familiar with [InstallationGuide installation] and [ConfigurationGuide configuration] tips of UniMRCP server.
 
